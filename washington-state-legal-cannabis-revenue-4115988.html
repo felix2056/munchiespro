@@ -1,0 +1,1345 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam-cell.nr-data.net","errorBeacon":"bam-cell.nr-data.net","licenseKey":"b0216f3ff3","applicationID":"62066258","transactionName":"YlxWbBBZWkUDB0IMXlsWdWsyF0RZERAZAV5WTFldDExCXwcTUxcfVEpEQA==","queueTime":0,"applicationTime":194,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"b0216f3ff3",applicationID:"62066258"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <!--<meta http-equiv="X-Frame-Options" content="allow">-->
+    <title>Washington State Legal Cannabis Revenue Soars | Cultiva Law, PLLC - JDSupra</title>
+    <meta name="description" content="In 2012, voters in Washington State approved a ballot measure that made recreational cannabis legal. Since then, the legal cannabis industry has grown year after year. In certain...">
+    <link rel="image_src" href="https://jdsupra-static.s3.amazonaws.com/profile-images/og.16096_2655.jpg">   
+    <meta property="og:title" content="Washington State Legal Cannabis Revenue Soars | JD Supra"> 
+    <meta property="og:url" content="https://www.jdsupra.com/legalnews/washington-state-legal-cannabis-revenue-4115988/">
+    <meta property="og:image" content="https://jdsupra-static.s3.amazonaws.com/profile-images/og.16096_2655.jpg">
+    <meta property="og:site_name" content="JD Supra">
+    <meta property="og:description" content="In 2012, voters in Washington State approved a ballot measure that made recreational cannabis legal. Since then, the legal cannabis industry has grown...">   
+    <meta property="fb:app_id" content="87741124305">
+    <meta property="og:type" content="article">
+    
+    
+        
+        
+    
+    
+    
+       
+    <meta name="twitter:card" content="summary"> 
+    <meta name="twitter:title" content="Washington State Legal Cannabis Revenue Soars">    
+    <meta name="twitter:description" content="In 2012, voters in Washington State approved a ballot measure that made recreational cannabis legal. Since then, the legal cannabis industry has grown year after year. In certain Washington...">  
+    <meta name="twitter:image" content="https://jdsupra-static.s3.amazonaws.com/profile-images/hr.16096_2655.jpg">    
+    <meta name="twitter:site" content="@jdsupra"> 
+    <meta name="twitter:creator" content="@cultivalaw">   
+       
+      
+     
+    
+    
+    <link rel="alternate" href="https://www.jdsupra.com/oembed/index.asmx/GetOembedObject?url=https%3a%2f%2fwww.jdsupra.com%2flegalnews%2fwashington-state-legal-cannabis-revenue-4115988%2f" type="text/xml+oembed">
+    <link rel="canonical" href="https://www.jdsupra.com/legalnews/washington-state-legal-cannabis-revenue-4115988/">
+    <link rel="shortcut icon" href="/img/fav-jdsupra.ico">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400,700" rel="stylesheet">
+<link rel="stylesheet" href="/theme/jds-main/jds-main.min.css?v=1.6">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.12/css/all.css" crossorigin="anonymous">
+
+
+    <script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-1583108-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+</head>
+
+<body id="docviewer" class="cf  ">
+<!--theme/jds-main header-->
+<span id="pageNameDebug"></span>
+<a name="top"></a>
+
+<header class="bb bg-white b--light-gray relative shadow-1 top-0 w-100 z-999">
+<nav class="cf f6 relative">
+    <div class="fl-l pv3">
+        <div class="cf">
+            <div class="hamburger dn-l fr menu-toggle">
+                <div class="dib v-mid"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+                <div class="dib v-mid ttu red f5 mt2 mb1 pr3">Menu</div>
+            </div>
+            <a href="/" class="fl pl2 pl3-m pl4-l"><img src="/img/logo/logo-jdsupra-opt.svg" alt="JD Supra" class="dib v-mid" onerror="this.src='/img/logo/jdsupra-logo-web-sm.png'; this.onerror=null;"></a><!--svg fallback for ie8-->
+        </div>
+    </div>
+    <div class="bt bn-l b--black-20 fr-l nav-block navmenu tc w-80-l">
+    <div class="flex-l h3-l items-center-l justify-start-l">        
+        <div class="megadropdown">
+            <a class="db link mid-gray mr2 mr3-l pv3" href="/law-news/" onclick="ga('send', 'event', 'topnav', 'topnav-news', 'topnav-news');">News &amp; Insights <span class="light-red caret"></span> </a>
+
+            <div class="pv3 submenu topNavLawNews tl z-999">
+                <div class="mw8-ns center cf">                                   
+                    <div class="fl w-100 w-third-ns pa2">
+                       <div class="fl"><i class="fa fa-bolt fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i></div> 
+                        <ul class="list fl mt1 pl2">
+                            <li class="ttu red f5 mt2 mb1">Popular</li>
+                            <li><a href="/law-news/labor-employment/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-news-col1', 'topnav-news-col1');">Labor &amp; Employment</a></li>        
+<li><a href="/law-news/finance-banking-law/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-news-col1', 'topnav-news-col1');">Finance &amp; Banking</a></li>
+<li><a href="/law-news/ip-law/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-news-col1', 'topnav-news-col1');">Intellectual Property</a></li>
+<li><a href="/law-news/health-law/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-news-col1', 'topnav-news-col1');">Health &amp; Healthcare</a></li>
+<li><a href="/law-news/environmental-law/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-news-col1', 'topnav-news-col1');">Environmental Issues</a></li>
+
+
+                            <li><a href="/browse/legal-news.aspx" class="red">more&</a></li>
+                        </ul>
+                    </div>
+                    <div class="fl w-100 w-third-ns pa2">
+                       <div class="fl"><i class="far fa-briefcase fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i></div> 
+                        <ul class="list fl mt1 pl2">
+                            <li class="ttu red f5 mt2 mb1">Business</li>
+                            <li><a href="/law-news/insurance-law/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col2');">Insurance</a></li>
+                            <li><a href="/law-news/commercial-real-estate/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col2');">Commercial Real Estate</a></li>        
+                            <li><a href="/topics/corporate-taxes/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col2');">Corporate Taxes</a></li>
+                            <li><a href="/law-news/immigration-law/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col2');">Immigration</a></li>
+                            <li><a href="/law-news/securities-law/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col2');">Securities</a></li>                                    
+                            <li><a href="/browse/legal-news.aspx" class="red" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col2');">more&</a></li>
+                        </ul>
+                    </div>
+                    <div class="fl w-100 w-third-ns pa2">
+                       <div class="fl"><i class="fas fa-user fa-2 fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i></div> 
+                        <ul class="list fl mt1 pl2">
+                            <li class="ttu red f5 mt2 mb1">Personal</li>        
+                            <li><a href="/law-news/residential-real-estate-law/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col3');">Residential Real Estate</a></li>
+                            <li><a href="/topics/estate-planning/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col3');">Estate Planning</a></li>
+                            <li><a href="/law-news/civil-rights/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col3');">Civil Rights</a></li>
+                            <li><a href="/topics/income-taxes/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col3');">Personal Taxes</a></li>
+                            <li><a href="/law-news/bankruptcy-law/" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col3');">Bankruptcy</a></li>
+                            <li><a href="/browse/legal-news.aspx" class="red" onclick="ga('send', 'event', 'topnav', 'topnav-news-col2', 'topnav-news-col3');">more&</a></li>
+                        </ul>
+                   </div>
+               </div>              
+                <div class="tc mt3 mb4"><a href="/law-news/" class="ba b--red br-pill ph4 pv2 red">Jump to: Latest Updates »</a></div> 
+            </div> 
+        </div>
+        <div class="megadropdown">
+            <a class="db link mid-gray mr2 mr3-l pv3" href="/topics/popular/" onclick="ga('send', 'event', 'topnav', 'topnav-trending', 'topNav-Trending');">Trending [<span class="light-red">7</span>] <span class="light-red caret"></span></a>
+            <div class="pt4 pb3 submenu topNavTrending tl z-999">
+                <div class="mw8 center">
+                    <ol class="list list-number">
+                        <li><a href="/topics/coronavirus-covid-19/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-trending', 'topnav-trending');">[HOT] Read Latest COVID-19 Guidance, All Aspects...</a></li>
+<li><a href="/topics/coronavirus-covid-19/webinars/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-trending', 'topnav-trending');">[SCHEDULE] Upcoming COVID-19 Webinars &amp; Online Programs</a></li>
+<li><a href="/topics/coronavirus-covid-19/force-majeure-clause/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-trending', 'topnav-trending');">[GUIDANCE] COVID-19 and Force Majeure Considerations</a></li>
+<li><a href="/topics/employer-liability-issues/coronavirus-covid-19/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-trending', 'topnav-trending');">[GUIDANCE] COVID-19 and Employer Liability Issues</a></li>
+<li><a href="https://resources.jdsupra.com/allposts/lawyers-and-law-firms-be-strategic-about-your-covid-19-guidance-insights-commentary" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-trending', 'topnav-trending');">Law Firms: Be Strategic In Your COVID-19 Guidance...</a></li>
+<li><a href="https://www.jdsupra.com/topics/coronavirus-covid-19/business-continuity-plans/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-trending', 'topnav-trending');">[GUIDANCE] On COVID-19 and Business Continuity Plans</a></li>
+<li><a href="http://www.jdsupra.com/follow/manageyourinterests/" class="lnk" onclick="ga('send', 'event', 'topnav', 'topnav-trending', 'topnav-trending');">Build a Morning News Brief: Easy, No Clutter, Free!</a></li>
+                                                  
+                    </ol>
+                    <div class="tc mt3 mb4"><a href="/browse/legal-news.aspx" class="ba b--red br-pill ph4 pv2 red">Browse All Law News Topics »</a></div>                                   
+                </div>
+            </div>             
+        </div>
+        <div class="megadropdown">
+            <a class="db link mid-gray mr2 mr3-l pv3" href="#" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor', 'topnav-findauthor');">Find Author <span class="light-red caret"></span></a>
+            <div class="pv3 submenu topNavFindLawyer tl z-999">
+                <div class="mw8-ns center cf">                                   
+                    <div class="fl w-100 w-third-ns pa2">
+                       <div class="fl"><i class="far fa-building fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i></div> 
+                        <ul class="list fl mt1 pl2">
+                            <li class="ttu red f5 mt2 mb1">By Business Matters</li>
+                            <li><a href="/search/searchResults.aspx?sTerm=labor+employment&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col1', 'topnav-findauthor-col1');">Labor &amp; Employment</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=finance+banking&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col1', 'topnav-findauthor-col1');">Finance &amp; Banking</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=intellectual+property&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col1', 'topnav-findauthor-col1');">Intellectual Property</a></li>                                                                         
+                            <li><a href="/search/searchResults.aspx?sTerm=insurance&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col1', 'topnav-findauthor-col1');">Insurance</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=taxes&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col1', 'topnav-findauthor-col1');">Taxes</a></li>
+                            <!--<li><a href="/findauthor/" class="red" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col1', 'topnav-findauthor-col1');">See All Subjects &raquo;</a></li>-->
+                        </ul>
+                    </div>
+                    <div class="fl w-100 w-third-ns pa2">
+                       <div class="fl"><i class="fas fa-user fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i></div> 
+                        <ul class="list fl mt1 pl2">
+                            <li class="ttu red f5 mt2 mb1">By Personal Issues</li>
+                            <li><a href="/search/searchResults.aspx?sTerm=civil+rights&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col2', 'topnav-findauthor-col2');">Civil Rights</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=family+law&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col2', 'topnav-findauthor-col2');">Family Matters</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=personal+injury&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col2', 'topnav-findauthor-col2');">Personal Injury</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=wills+trusts+estate+planning&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col2', 'topnav-findauthor-col2');">Wills, Trusts, &amp; Estate Planning</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=workers+compensation&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col2', 'topnav-findauthor-col2');">Workers Compensation</a></li>
+                            <!--<li><a href="/findauthor/" class="red" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col2', 'topnav-findauthor-col2');">See All Subjects &raquo;</a></li>-->
+                        </ul>
+                    </div>
+                    <div class="fl w-100 w-third-ns pa2">
+                       <div class="fl"><i class="fas fa-map-marker fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i></div> 
+                        <ul class="list fl mt1 pl2">
+                            <li class="ttu red f5 mt2 mb1">By Location</li>
+                            <li><a href="/search/searchResults.aspx?sTerm=california&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col3', 'topnav-findauthor-col3');">California</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=new+york&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col3', 'topnav-findauthor-col3');">New York</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=texas&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col3', 'topnav-findauthor-col3');">Texas</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=canada&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col3', 'topnav-findauthor-col3');">Canada</a></li>
+                            <li><a href="/search/searchResults.aspx?sTerm=united+kingdom&amp;tab=Authors" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col3', 'topnav-findauthor-col3');">United Kingdom</a></li>
+                            <!--<li><a href="/findauthor/" class="red" onclick="ga('send', 'event', 'topnav', 'topnav-findauthor-col3', 'topnav-findauthor-col3');">See All Locations &raquo;</a></li>-->
+                        </ul>
+                   </div>
+               </div>
+            </div>
+        </div>
+        <div class="megadropdown">
+            <a class="db link mid-gray mr2 mr3-l pv3" href="/follow/manageyourinterests/" onclick="ga('send', 'event', 'topnav', 'topnav-subscribe', 'topnav-subscribe');">Subscribe <span class="light-red caret"></span></a>
+            <div class="pt3 pb2 submenu topNavFollow tl z-999">
+                <div class="flex flex-wrap mw7-l mw8-m center cf ph3">
+                    <div class="w-50-ns w-third-l w-100 mb2 pr4-ns">
+                        <div class="flex items-center">
+                            <i class="far fa-envelope fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i> 
+                            <a href="/follow/manageyourinterests/" onclick="ga('send', 'event', 'follow', 'Topnav Email Link - Subscribe', 'Custom Email Digests');">Custom Email Digests</a>
+                        </div>
+                        <h1 class="f6 dn db-m db-l mid-gray fw5">Build a custom email digest by following topics, people, and firms published on JD Supra.</h1>
+                    </div>
+                    <div class="flex flex-wrap w-50-ns w-two-thirds-l w-100">
+                        <div class="flex items-center w-50"><i class="fab fa-twitter fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i>  <a href="/legal-news/twitter-law-feeds.aspx" onclick="ga('send', 'event', 'topnav', 'topnav-subscribe-twitter', 'topnav-subscribe-twitter');">Twitter</a></div>
+                        <div class="flex items-center w-50"><i class="fas fa-rss fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i>  <a href="/legal-news/rss-law-feeds.aspx" onclick="ga('send', 'event', 'topnav', 'topnav-subscribe-rss', 'topnav-subscribe-rss');">RSS</a></div>
+                        <div class="flex items-center w-50"><i class="far fa-file-code fa-lg fa-fw ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i>  <a href="/legal-news/publisher-law-feeds.aspx" onclick="ga('send', 'event', 'topnav', 'topnav-subscribe-publisher', 'topnav-subscribe-publisher');">Feeds for Publishers</a></div> 
+                    </div>                                
+                </div>
+            </div>
+        </div>
+        <div class="mv3 mv0-l"><a class="link mid-gray mr3 pb3" href="/perspective/media-query.aspx" onclick="ga('send', 'event', 'topnav', 'topnav-reporters', 'topnav-reporters');">For Reporters</a>
+        </div>
+        <div class="center ma2 tl v-mid w-40-l w-50-m" id="search-blk">
+            <div id="headerSearchBox"></div>
+        </div>    
+        <div class="megadropdown ph2">
+            <a onclick="ga('send', 'event', 'topnav', 'topnav-mgmtacct', 'topnav-mgmtacct');" class="f7 flex items-center justify-center mid-gray" id="nav-account"><i class="fas fa-cog fa-2x pv3 red"></i>
+            <span class="dn-l f6 pl1">My Account</span>
+            <!---->
+            
+            </a>
+
+            
+
+             
+
+            
+                <div class="pv3 submenu topNavAccountLoggedOut">
+                <div class="center mw8">             
+                    <a href="/login.aspx" class="flex items-center justify-center justify-end-l" onclick="ga('send', 'event', 'topnav', 'topnav-login', 'topnav-login');"><i class="fas fa-sign-in fa-lg ba br-100 mb2 mr2 mt1 pa3 red tc" aria-hidden="true"></i> Log In</a>                  
+                </div></div><!--end topNavAccountLoggedOut-->
+            
+
+        </div> 
+      </div>                                        
+    </div><!--end nav-block-->
+ </nav><!--end new header-->
+
+<!--MEGA MENU-->        
+
+</header>
+<!-- THIS FILE IS GENERATED AUTOMATICALLY BY WEBPACK. PLEASE BE CAREFUL EDITING THIS FILE DIRECTLY. WHAT YOU PROBABLY WANT TO DO IS INSTEAD EDIT THE TEMPLATE
+      scripts_template.html
+-->
+<script type="text/javascript" src="/inc/dist/runtime~main.eab6bb50b2a8ab71e2ef.js"></script><script type="text/javascript" src="/inc/dist/vendors.2bcbf25b5dee2d7c0038.js"></script><script type="text/javascript" src="/inc/dist/main.ba4fcd703f5170c42284.js"></script><script type="text/javascript" src="/inc/dist/runtime~vendor.c8de0ae0012746effc10.js"></script><script type="text/javascript" src="/inc/dist/vendor.eddf22890b65e82f4306.js"></script> 
+<div class="bg-slant gradient bg-custom"></div>   
+
+<div class="nt7 relative">
+    <!--CMS links-->
+    
+    <!--  -->
+    <!--  -->
+    
+
+    <!--Owner Message-->
+    
+
+<div class="bg-white cf center mw8 pa3 pa4-ns w-100 w-90-m w-80-l shadow-1-ns mb4">
+    <form method="post" action="/legalnews/washington-state-legal-cannabis-revenue-4115988/" id="superForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['superForm'];
+if (!theForm) {
+    theForm = document.superForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZKrmKFqx71WlZSwS76rrTh30xuv8xiOgQqVS8CexsOXo8fg6Q3YBP63GA6C43IBgGg2&amp;t=637729336233813844" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQt97PirxlfN_CHGmYmx6gxOLHCwn8ts2QW8TxsBZTzXb4xpXtWIgCdi9MiyY2zPfo9EdW7Brvq2S8XzPrIXqO-zzpw7gRHtcNOAUYkpAQdBNuPMZhJj7GJ9BefK17pWox1q8a6dE1a0goJXHSQYdVoA1&amp;t=ffffffff8333b97c" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=JnUc-DEDOM5KzzVKtsL1tSpF-QApT2XDaA6-4lxM_GOClbyCXgZi2cjvY53w5XiJTZCY0L-ISe-oxJEGBE5Rg33s-hZvgO-x-RTeNQJBFMoQt_zv4iQeGiEb-1YqHuo7MYhaX-HQ6LvRpIfT-l2IeqmGJl3wKZBUcnLUzhYUNOqA-tFtBdo7o_fl-oCmwJDO0&amp;t=ffffffff8333b97c" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+OpenGate:function(gateData,gateFieldData,succeededCallback, failedCallback, userContext) {
+/// <param name="gateData" type="jdsupra.DocGate.GateData">jdsupra.DocGate.GateData</param>
+/// <param name="gateFieldData" type="jdsupra.DocGate.GateFieldData">jdsupra.DocGate.GateFieldData</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'OpenGate',false,{gateData:gateData,gateFieldData:gateFieldData},succeededCallback,failedCallback,userContext); },
+GetGateFieldData:function(fileID,succeededCallback, failedCallback, userContext) {
+/// <param name="fileID" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'GetGateFieldData',true,{fileID:fileID},succeededCallback,failedCallback,userContext); },
+AbandonGate:function(gateData,succeededCallback, failedCallback, userContext) {
+/// <param name="gateData" type="jdsupra.DocGate.GateData">jdsupra.DocGate.GateData</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'AbandonGate',false,{gateData:gateData},succeededCallback,failedCallback,userContext); },
+OnClickEvent:function(eventData,succeededCallback, failedCallback, userContext) {
+/// <param name="eventData" type="Models.ClickEventData">Models.ClickEventData</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'OnClickEvent',false,{eventData:eventData},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) {
+PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return PageMethods._staticInstance.get_path();}
+PageMethods.set_timeout = function(value) {
+PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { 
+PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { 
+ PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { 
+PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("documentViewer.aspx");
+PageMethods.OpenGate= function(gateData,gateFieldData,onSuccess,onFailed,userContext) {
+/// <param name="gateData" type="jdsupra.DocGate.GateData">jdsupra.DocGate.GateData</param>
+/// <param name="gateFieldData" type="jdsupra.DocGate.GateFieldData">jdsupra.DocGate.GateFieldData</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.OpenGate(gateData,gateFieldData,onSuccess,onFailed,userContext); }
+PageMethods.GetGateFieldData= function(fileID,onSuccess,onFailed,userContext) {
+/// <param name="fileID" type="Number">System.Int32</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.GetGateFieldData(fileID,onSuccess,onFailed,userContext); }
+PageMethods.AbandonGate= function(gateData,onSuccess,onFailed,userContext) {
+/// <param name="gateData" type="jdsupra.DocGate.GateData">jdsupra.DocGate.GateData</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.AbandonGate(gateData,onSuccess,onFailed,userContext); }
+PageMethods.OnClickEvent= function(eventData,onSuccess,onFailed,userContext) {
+/// <param name="eventData" type="Models.ClickEventData">Models.ClickEventData</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.OnClickEvent(eventData,onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+Type.registerNamespace('jdsupra.DocGate');
+if (typeof(jdsupra.DocGate.GateData) === 'undefined') {
+jdsupra.DocGate.GateData=gtc("jdsupra.DocGate.GateData");
+jdsupra.DocGate.GateData.registerClass('jdsupra.DocGate.GateData');
+}
+if (typeof(jdsupra.DocGate.GateFieldData) === 'undefined') {
+jdsupra.DocGate.GateFieldData=gtc("jdsupra.DocGate.GateFieldData");
+jdsupra.DocGate.GateFieldData.registerClass('jdsupra.DocGate.GateFieldData');
+}
+Type.registerNamespace('Models');
+if (typeof(Models.ClickEventData) === 'undefined') {
+Models.ClickEventData=gtc("Models.ClickEventData");
+Models.ClickEventData.registerClass('Models.ClickEventData');
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1D9A11B9">
+</div>
+    <input type="hidden" name="curContentID" id="curContentID" value="f148ac60-c68c-48df-aaa4-0307631d2737">
+
+
+ <!--File unavailable-->
+    
+<!--/File unavailable--> 
+
+          
+        <!--Content Header-->
+        <div class="tc-ns f7 silver mv2"><time>June 7, 2021</time></div>
+        <div class="tc-ns f6">
+               
+        </div>
+        <div id="DocumentHeaderPanel" class="ph4-l tc-ns">
+	
+            <h1 class="doc_name f2-ns f3 mv0">Washington State Legal Cannabis Revenue Soars</h1><!--Title-->
+        
+</div>
+        
+        <div class="f6 silver db dn-l lh-copy mt2 tc-ns">
+            <!--show authors on top on mobile only-->
+            <div class="mb1"><a href="/authors/aaron-pelley/" class="dib mb2">Aaron Pelley</a></div>
+
+            <a href="/profile/cultiva_law_docs/">Cultiva Law, PLLC</a> 
+
+            <div class="mv2">
+                <span class="br-pill dib follow-action-lnk follow-lnk" onclick="PostChange('',18783,'Cultiva Law, PLLC',4,1)" name="follow_4_18783">+ Follow</span>
+                <span class="br-pill dib follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_4_18783">x&nbsp;Following</span>
+                <span class="br-pill dib follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',18783,'Cultiva Law, PLLC',4,0)" name="unfollow_4_18783">x&nbsp;Following</span> 
+                <span class="br-pill dib follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_4_18783">- Unfollow</span>
+                <a href="/profile/contributor-contact.aspx" id="ContactNowBTNlink2" class="dn-l ml1 pv1 ph3 br-pill bg-red white f6 dib" onclick="ga('send', 'event', 'follow', 'Contact Button - Doc View mobile', 'Contact Button - Doc View mobile');">Contact</a>
+            </div>
+        </div>
+        <!--/Content Header-->
+       
+        <!--Social Media Row-->        
+        <div id="followPanel">
+	
+            <div class="mt3 dn flex-ns items-center justify-center no-print">        
+
+                <a onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.jdsupra.com%2flegalnews%2fwashington-state-legal-cannabis-revenue-4115988%2f', 'LinkedInShare', 'width=520,height=570');">
+                    <div class="bg-animate bg-dark-blue br-pill pointer f7 hover-bg-blue link mr2 ph3 pv2 white">
+                        <i class="fab fa-linkedin-in pr1"></i> LinkedIn
+                    </div>
+                </a>
+
+                <a onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.jdsupra.com%2flegalnews%2fwashington-state-legal-cannabis-revenue-4115988%2f', 'FacebookShare', 'width=600,height=570');">
+                    <div class="bg-animate bg-blue br-pill pointer f7 hover-bg-dark-blue link mr2 ph3 pv2 white">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </div>
+                </a>
+
+                <a onclick="window.open('https://twitter.com/intent/tweet?text=Washington+State+Legal+Cannabis+Revenue+Soars&amp;url=https%3a%2f%2fwww.jdsupra.com%2flegalnews%2fwashington-state-legal-cannabis-revenue-4115988%2f', 'TwitterShare', 'width=600,height=300');">
+                    <div class="bg-animate bg-light-blue br-pill pointer f7 hover-bg-blue link mr2 ph3 pv2 white">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </div>
+                </a>
+
+                <div class="SendPanelLink drkgraylnk mr2">
+                    <a href="javascript:sendit();" class="br-pill ba dim link ph2 pv1 mid-gray pointer f7"><i class="far fa-envelope" aria-hidden="true"></i> Send</a></div>
+                
+                  <div class="dib EmbedPanelLink drkgraylnk pointer v-mid">
+                    <span onclick="HideShowEmbed();" class="br-pill ba dim mr3 mr0-ns ph2 pv1 dib mid-gray f7"><i class="fa fa-code" aria-hidden="true"></i> Embed</span>
+                  </div>               
+                
+            </div><!--end socialIconRow-->     
+            <div id="EmbedPanel">
+		 
+                <div class="embedBox f6 bg-light-gray mt2 pa3" style="display: none;">
+                <div class="fw7 tc lh-title mb2">To embed, copy and paste the code into your website or blog:</div>
+                <textarea class="ba pa3 b--black-20 w-100 f6 mid-gray">&lt;iframe src="//www.jdsupra.com/post/contentViewerEmbed.aspx?fid=f148ac60-c68c-48df-aaa4-0307631d2737" width="100%" height="620" frameborder="1" style="border: 2px solid #ccc; overflow-x:hidden !important; overflow:hidden;" scrolling="auto"&gt;&lt;/iframe&gt;</textarea></div>             
+            
+	</div> 
+        
+</div>   
+        <!--/Social Media Row--> 
+
+<!--primary content-->
+<div class="cf mv2 mv4-l">
+    <div class="br-l b--light-gray fl-l pl2-l pr4-l w-70-l">           
+
+              
+
+            <!--Case 1: PDF View-->
+                          
+            <!--/End PDF View-->    
+
+        
+            <!--Case 2: Video View-->
+                
+            <!--/Video View-->   
+     
+            <!--Case 3: HTML Content View-->
+            <div id="HTMLContentViewPanel">
+	
+                <div id="html-view-content" class="jds-main-content"><p>In 2012, voters in Washington State approved a ballot measure that made recreational cannabis legal. Since then, the legal cannabis industry has grown year after year. In certain Washington counties, cannabis purchases now outpace those of tobacco. While some are predicting that a plateau is on the horizon, the latest revenue figures show that growth in the cannabis industry is reaching all-time highs.</p>
+
+<p><strong>Report Shows $2 Billion Addition To The Economy</strong><br>
+Based on a report from Washington State University, revenue generated by the sale of legal cannabis continues to climb. In 2020, legal cannabis in Washington added an estimated $1.8 billion to the states economy, and this figure is expected to rise to $2.12 billion in 2021. The study also found that the cannabis industry continues to grow at an exponential rate. According to the report, retail cannabis sales grew 21% between 2019 and 2020 and grew 605% between 2015 and 2020. Total tax revenues in 2020 stemming from the cannabis sector, including property taxes, sales &amp; excise taxes, and corporate taxes, amounted to $883.38 million.<br>
+The report, which analyzed the cannabis industry in 2020, gathered data from a number of sources to generate its findings. Notably, the report focused not only on retail cannabis sales, but also on growing and processing operations. For example, the report considered cannabis-generated revenue in the soil and agricultural industry, which has benefitted greatly from legalization. Data from companies like Scotts Miracle Grow and Hawthorne Gardening Company reflected this boost in their sales and revenue in Washington since the legalization of cannabis.</p>
+
+<p><strong>Effect Of Legalized Recreational Home Grow</strong><br>
+The study also attempted to predict how legalizing home growing of marijuana for recreational purposes would affect the market. California, Colorado, and Canada all have legalized recreational home grow, albeit with restrictions on volume and flowering. In Washington, it is legal to grow cannabis at home for medical purposes, but a person may not personally grow it for recreational purposes. Some analysts fear that the legalization of recreational home grow in Washington would impede the continued growth of the cannabis industry. Others predict that legalized home grow would simply shift the primary source of cannabis-related tax revenue from retail purchases of recreational cannabis to lighting, soil, and other growing expenses.</p>
+
+<p><strong>Conclusions</strong><br>
+While it may not come as a surprise that the study predicts a continued rise in cannabis-related revenue, it also concludes that legalizing recreational home grow would do little to impede that growth. The Washington State University study estimates that the cannabis industrys predicted revenue of $2.12 billion for the year 2021 without legalized home grow would shift to an estimated revenue of $2.05 to $2.3 billion if home grow of recreational marijuana were legalized. As the numbers clearly indicate, the cannabis industry is predicted to experience continued growth regardless of the legalization of recreational home grow. Still, it remains to be seen exactly how and under what conditions home grow would be implemented in the state, and how the industry would change. With the introduction of a home-grow bill earlier this year, we may be able to see the real impact of home growing of cannabis on Washingtons economy as soon as this year.</p>
+
+</div>
+            
+</div>        
+            
+            <!--Case 5: Events Content View-->
+                    
+
+
+
+            <!--Content Info-->                 
+            <div id="BottomFileInfoPanel" class="t-cv-info-panel">
+	
+       
+            <!--Case Info-->
+             
+
+            <div class="f5 mt4">
+                <a href="javascript:sendit();" class="br-pill ba dim link ph3 pv1 mb2 dib mid-gray pointer mr2 f7"><i class="far fa-envelope" aria-hidden="true"></i> Send</a>
+                <a id="PrintHTMLHyperLink" class="br-pill ba dim link ph3 pv1 mb2 dib mid-gray pointer mr2 f7" href="javascript:window.print();"><i class="fa fa-print" aria-hidden="true"></i> Print</a>
+                <a id="reportproblemDocViewer2" class="br-pill ba dim link ph3 pv1 mb2 dib mid-gray pointer f7" href="/reportaproblem/index.aspx"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Report</a>
+            </div>
+
+            
+
+
+            <!--Related/latest docs-->
+            <div id="ContentViewRelatedPanel" class="connect-related-list">
+		 
+                <h3 class="bt bw1 pt3 f4 mb3 ttu">Related Posts</h3><ul class="lh-copy cf f6 fw7 ml0 pl3">
+<li class="fl pb3 pr4 w-50-ns"><a href="/legalnews/purchasing-a-washington-marijuana-8017296/" onclick="ga('send', 'event', 'docview', 'read-more-links', 'related-doc-link');">Purchasing a Washington Marijuana License and Application FAQs</a></li>
+</ul>
+
+
+                <h3 class="bt bw1 pt3 f4 mb3 ttu">Latest Posts</h3><ul class="lh-copy cf f6 fw7 ml0 pl3"><li class="fl pb3 pr4 w-50-ns"><a href="/legalnews/psilocybin-following-in-the-footsteps-9078240/" onclick="ga('send', 'event', 'docview', 'read-more-links', 'latest-doc-link');">Psilocybin: Following in the Footsteps of Cannabis Along the Path to Legality</a></li>
+<li class="fl pb3 pr4 w-50-ns"><a href="/legalnews/when-will-a-college-athlete-be-able-to-6058306/" onclick="ga('send', 'event', 'docview', 'read-more-links', 'latest-doc-link');">When Will a College Athlete Be Able to Sign a NIL Deal For CBD or Cannabis Company?</a></li>
+<li class="fl pb3 pr4 w-50-ns"><a href="/legalnews/did-washington-county-ban-inhalable-6559617/" onclick="ga('send', 'event', 'docview', 'read-more-links', 'latest-doc-link');">Did Washington County Ban Inhalable Cannabis Items at OLCC Dispensaries? A Comprehensive ReviewÂ&nbsp;</a></li>
+<li class="fl pb3 pr4 w-50-ns"><a href="/legalnews/it-s-not-all-fun-and-games-the-cannabis-1792115/" onclick="ga('send', 'event', 'docview', 'read-more-links', 'latest-doc-link');">Itâ€™s Not All Fun and Games: The Cannabis Industryâ€™s Downside</a></li>
+</ul><p class="moreLessLink f7 tr"><a class="red" href="/profile/cultiva_law_docs/" onclick="ga('send', 'event', 'docview', 'read-more-links', 'latest-doc-see-more');">See more »</a></p>
+
+            
+	</div>  
+
+            <!--Video Ribbon--> 
+            
+
+        
+            <!--Disclaimer-->
+            <div id="disclaimerDisplay">
+		
+                <div class="mv4 f7 gray lh-copy bt bb b--black-20 pv3 bb-0-ns">
+                    <p>DISCLAIMER: Because of the generality of this update, the information provided herein may not be applicable in all situations and should not be acted upon without specific legal advice based on particular situations.</p>
+                    <p>© Cultiva Law, PLLC <script>var today = new Date(); var yyyy = today.getFullYear();document.write(yyyy + " ");</script> |  Attorney Advertising</p>   
+                </div>
+            
+	</div>
+
+            <!--Subscribe Ad-->
+                    
+    
+</div> <!--End BottomFileInfoPanel--> 
+
+
+</div><!--end primary columm-->      
+
+<div id="attributionPanel">
+	
+<div class="fl-l pl3-m pl4-l w-30-l">
+        <a name="FollowSection"></a>
+        <div class="bg-light-green dark-green pv3 ph2 mb4 db lh-title tc fw7" name="MasterAlerter" style="display: none;">
+            <div class="mb1"><i class="far fa-check-circle fa-2x" aria-hidden="true"></i></div>
+            
+            <p class="mb0"><a href="/follow/manageyourinterests//">Refine your interests »</a></p>
+        </div>
+     
+        <h4 class="ttu mb2 mid-gray f6 mt0 mb2">
+        Written by:
+        </h4>
+
+        <!--Follow Firm-->
+        <div class="f6 dt w-100 pb3 bb b--black-10 lh-title">
+
+            <div id="ProfileImagePanel" class="dtc w3 v-top">
+		
+                <a onclick="ga('send', 'event', 'docview', 'follow', 'firm-img');" href="/profile/cultiva_law_docs/"><img src="https://jdsupra-static.s3.amazonaws.com/profile-images/sm.16096_2655.jpg" alt="Cultiva Law, PLLC" class="border-light br2"></a>
+            
+	</div>  
+
+            <div class="dtc pl2 v-top">
+                <div class="mb1"><a onclick="ga('send', 'event', 'docview', 'follow', 'firm-link');" href="/profile/cultiva_law_docs/">Cultiva Law, PLLC</a></div>
+
+                <a href="/profile/contributor-contact.aspx" id="ContactNowBTNlink" class="dib mb1 no-underline pv1 ph2 br-pill bg-red white f7" onclick="ga('send', 'event', 'follow', 'Contact Button - Doc View Top', 'Contact Button - Doc View Top');">Contact</a>
+
+                <span class="br-pill dib follow-action-lnk follow-lnk f7" onclick="PostChange('',18783,'Cultiva Law, PLLC',4,1)" name="follow_4_18783">+ Follow</span>
+                <span class="br-pill dib follow-action-lnk following-lnk f7" style="display: none;" name="follow_spinner_4_18783">x&nbsp;Following</span>
+                <span class="br-pill dib follow-action-lnk following-lnk f7" style="display: none;" onclick="PostChange('',18783,'Cultiva Law, PLLC',4,0)" name="unfollow_4_18783">x&nbsp;Following</span> 
+                <span class="br-pill dib follow-action-lnk unfollowing-lnk blue f7" style="display: none;" name="unfollow_spinner_4_18783">- Unfollow</span>
+            </div>
+        </div> 
+
+    <!--Follow People-->
+    <div id="followPeopleSection">
+         <div class="follow-people-list f6 lh-title">      
+            <!--Follow Author Buttons-->
+             
+                <div class="js-followauthor cf pv3 bb b--black-10">
+                    <div class="dt w-100">
+                        <div class="dtc v-mid w2 pr1">
+                            <a onclick="ga('send', 'event', 'docview', 'follow', 'author-img');" href="/authors/aaron-pelley/"><img src="https://jdsupra-static.s3.amazonaws.com/authors/6064cf2905751.30h.jpg" alt="Aaron Pelley" class="br2 v-mid"></a>
+                        </div>
+                        <div class="dtc v-mid">
+                            <a onclick="ga('send', 'event', 'docview', 'follow', 'author-link');" href="/authors/aaron-pelley/">Aaron Pelley</a>
+                        </div>
+                        <div class="dtc f7 v-mid tr w-40">
+                            <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',109812,'Aaron Pelley',1,1)" name="follow_1_109812">+ Follow</span>
+                            <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_1_109812">x&nbsp;Following</span>
+                            <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',109812,'Aaron Pelley',1,0)" name="unfollow_1_109812">x&nbsp;Following</span> 
+                            <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_1_109812">- Unfollow</span>
+                        </div>
+                    </div>
+                </div> 
+                  
+        </div>
+        <div class="blue b--black-10 bt doc_trunk_more dn f7 mt2 pointer pt2 tc" onclick="showMoreTags('#followPeopleSection')">more <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+        <div class="blue b--black-10 bt doc_trunk_less dn f7 mt2 pointer pt2 tc" onclick="hideMoreTags('#followPeopleSection')">less <i class="fa fa-angle-up" aria-hidden="true"></i></div>
+    </div><!--end truncate tags-->
+
+<!--Follow Topics/Subjects-->
+<div class="mv4 follow-trunk-List block-with-bot-border lh-title" id="followTopSubSection">
+    <h4 class="ttu mb2 mid-gray f6 mt0 mb2">Published In:</h4>
+
+     <div class="follow-subtop-list f6">             
+        <!--Follow Topics Buttons-->
+        
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="/topics/cannabis-products/">Cannabis Products</a>
+                </div>               
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',32833,'Cannabis Products',2,1)" name="follow_2_32833">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_2_32833">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',32833,'Cannabis Products',2,0)" name="unfollow_2_32833">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_2_32833">- Unfollow</span>
+                </div>         
+            </div> 
+            
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="/topics/legalization/">Legalization</a>
+                </div>               
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',7637,'Legalization',2,1)" name="follow_2_7637">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_2_7637">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',7637,'Legalization',2,0)" name="unfollow_2_7637">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_2_7637">- Unfollow</span>
+                </div>         
+            </div> 
+            
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="/topics/marijuana/">Marijuana</a>
+                </div>               
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',68,'Marijuana',2,1)" name="follow_2_68">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_2_68">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',68,'Marijuana',2,0)" name="unfollow_2_68">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_2_68">- Unfollow</span>
+                </div>         
+            </div> 
+            
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="/topics/new-legislation/">New Legislation</a>
+                </div>               
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',9128,'New Legislation',2,1)" name="follow_2_9128">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_2_9128">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',9128,'New Legislation',2,0)" name="unfollow_2_9128">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_2_9128">- Unfollow</span>
+                </div>         
+            </div> 
+            
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="/topics/recreational-use/">Recreational Use</a>
+                </div>               
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',29900,'Recreational Use',2,1)" name="follow_2_29900">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_2_29900">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',29900,'Recreational Use',2,0)" name="unfollow_2_29900">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_2_29900">- Unfollow</span>
+                </div>         
+            </div> 
+            
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="/topics/state-and-local-government/">State and Local Government</a>
+                </div>               
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',8799,'State and Local Government',2,1)" name="follow_2_8799">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_2_8799">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',8799,'State and Local Government',2,0)" name="unfollow_2_8799">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_2_8799">- Unfollow</span>
+                </div>         
+            </div> 
+            
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="/topics/state-legislatures/">State Legislatures</a>
+                </div>               
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',25137,'State Legislatures',2,1)" name="follow_2_25137">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_2_25137">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',25137,'State Legislatures',2,0)" name="unfollow_2_25137">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_2_25137">- Unfollow</span>
+                </div>         
+            </div> 
+            
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="/topics/washington/">Washington</a>
+                </div>               
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',34419,'Washington',2,1)" name="follow_2_34419">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_2_34419">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',34419,'Washington',2,0)" name="unfollow_2_34419">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_2_34419">- Unfollow</span>
+                </div>         
+            </div> 
+            
+
+        <!--Follow Subject Buttons-->
+        
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">          
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="https://www.jdsupra.com/law-news/agriculture/">Agriculture</a>
+                </div>   
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',28,'Agriculture',3,1)" name="follow_3_28">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_3_28">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',28,'Agriculture',3,0)" name="unfollow_3_28">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_3_28">- Unfollow</span>
+                </div>                          
+            </div> 
+            
+            <div class="js-followsubtops pv3 bb b--black-10 dt w-100">          
+                <div class="dtc">
+                    <a onclick="ga('send', 'event', 'docview', 'follow', 'topic-link');" href="https://www.jdsupra.com/law-news/commercial-contracts-law/">General Business</a>
+                </div>   
+                <div class="dtc w-40 f7 tr f7">
+                    <span class="br-pill follow-action-lnk follow-lnk" onclick="PostChange('',37,'General Business',3,1)" name="follow_3_37">+ Follow</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" name="follow_spinner_3_37">x&nbsp;Following</span>
+                    <span class="br-pill follow-action-lnk following-lnk" style="display: none;" onclick="PostChange('',37,'General Business',3,0)" name="unfollow_3_37">x&nbsp;Following</span> 
+                    <span class="br-pill follow-action-lnk unfollowing-lnk blue" style="display: none;" name="unfollow_spinner_3_37">- Unfollow</span>
+                </div>                          
+            </div> 
+              
+
+        
+    </div>
+    <div class="doc_trunk_more tr f7 mt2 dn blue" onclick="showMoreTags('#followTopSubSection')">more <i class="fa fa-angle-down" aria-hidden="true"></i></div>
+    <div class="doc_trunk_less tr f7 mt2 dn blue" onclick="hideMoreTags('#followTopSubSection')">less <i class="fa fa-angle-up" aria-hidden="true"></i></div>    
+</div>
+
+
+        <!--Start Connect Panel-->  
+        <div id="ContactPanelStatic">
+		  
+
+            <h4 class="ttu mb2 mid-gray f6 mt0 mb2">Cultiva Law, PLLC on:</h4>
+            <div class="follow-social-content">
+                <div class="dib v-mid"><a href="http://www.linkedin.com/company/cultiva-law/" id="hrefLinkedin"><img src="/img/social-icons/linkedin-32x32.png"></a></div>
+                <div class="dib v-mid"><a href="http://facebook.com/CultivaLaw/" id="hrefFacebook"><img src="/img/social-icons/facebook-32x32.png"></a></div>
+                <div class="dib v-mid"><a href="http://twitter.com/cultivalaw" id="hrefTwitter"><img src="/img/social-icons/twitter-32x32.gif"></a></div>
+                <div class="dib v-mid"><a href="http://cultivalaw.com/" id="hrefWebsite"><img src="/img/social-icons/website-32x32.gif"></a></div>    
+                <div class="dib v-mid"><a href="/profile/cultiva_law_rss" id="hrefRSS"><img src="/img/social-icons/supra-32x32.gif"></a></div>
+            </div>
+        
+	</div>
+        <!--/End Connect Panel-->
+ <!--End written by and published section-->
+
+<!--Rotating Ads-->
+                
+    <div id="adPanel2">
+		
+    
+	</div> 
+<!--/Rotating Ads-->
+
+<div class="dn mt4 no-print">
+  <!--RCA PROMO-->
+</div>
+
+<div class="mt4 tc no-print">            
+    <a href="/perspective/media-query.aspx"><img src="/img/ad-for-journalists.png" alt="Reporters on Deadline"></a>
+</div>
+
+<!--Citations-->
+
+
+<!--End Citations-->
+          
+</div><!--end jds-doc-side-content-->
+
+</div><!--attributionPanel i reuse this panel so i didn't have to write one in .vb file-->
+
+</div><!--end jds-content-viewer-->
+
+</form></div><!--end outer div-->
+      
+
+     
+    <div id="FollowLinkedInSignIn" class="reveal-modal mw7 center pa4 overflow-y-scroll">
+        <a class="close-reveal-modal tr db silver" onclick="ga('send', 'event', 'follow', 'Close LinkedIn MDB - Doc View', 'X icon in LI MDB - Doc View');"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <h1 class="f4 tc georgia tracked mb2 gray mt0">"My best business intelligence, in one easy email&"</h1>
+        <div class="gray mb3 lh-title measure center">Your first step to building a free, personalized, morning email brief covering pertinent authors and topics on JD Supra:</div>    
+        <div class="tc">
+            <a href="/follow/subscribe-form.aspx" onclick="ga('send', 'event', 'follow', 'Email Signup MDB - Doc View', 'Email Signup MDB - Doc View');" class="ba bg-yellow black b--yellow br-pill dib f5 fw7 grow mb3 mr1-ns ph4 pv2">Sign Up</a> 
+            <a href="/login.aspx" onclick="ga('send', 'event', 'follow', 'Already signed up MDB - Doc View', 'Already signed up MDB - Doc View');" class="ba br-pill b--blue blue fw7 grow ph3 pv2">Log in</a>
+        </div>
+
+        <div class="f7 gray tc"><em><span class="red">*</span>By using the service, you signify your acceptance of <span id="policy-click" class="blue pointer">JD Supra's Privacy Policy.</span></em>
+        </div>
+
+        <div class="tc mt3" id="digest-img"><a href="/linkedinlogin/" onclick="ga('send', 'event', 'follow', 'Digest Image MDB - Doc View', 'Digest Screenshot Image - Doc View');"><img src="/img/digest-screenshot.jpg" alt="Custom Email Digest"></a>
+        </div>
+
+        <div id="policy-blk" class="mv3 dn f7"> 
+            <div class="f7 blue close-lnk mb2 pointer tr">- hide</div>
+             <iframe src="/inc/modals/privacy-policy-iframe.aspx" class="ba b--black-30 bg-white h5 w-100"></iframe>
+            <div class="f7 blue close-lnk mt2 pointer tr">- hide</div> 
+        </div>
+
+ 
+    </div><!--end follow mdb-->
+    
+<!--end form-->
+
+</div>    
+<!--End markup-->
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--<script defer src="https://pro.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-I3Hhe9TkmlsxzooTtbRzdeLbmkFQE9DVzX/19uTZfHk1zn/uWUyk+a+GyrHyseSq" crossorigin="anonymous"></script>-->
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+    $(".nav-block").slideToggle(100);
+  });
+  // Toggle the submenus on desktop versions
+  $('.megadropdown > a').click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('.nav-open').not($(this).siblings()).removeClass('nav-open'); //remove red border class on other opened megadropdown
+    $('.submenu').not($(this).siblings()).slideUp(100); //close other open megadropdown
+    $(this).siblings(".submenu").slideToggle(100); //open megadropdown
+    $(this).toggleClass('nav-open'); //red hover border
+  });
+});
+$(document).on("click", function () {
+    $(".submenu").hide();
+    $(".megadropdown > a").removeClass('nav-open');
+});
+</script>
+
+<!--MDB GDPR Cookies-->
+<div class="bg-blue white bottom-2 br2 bw2 fixed right-2 pa3 w-20-ns w-40 z-999 dn" id="cookiesModal">
+    <!-- Privacy -->
+
+    <div id="PrivacyPolicyPanel">
+        <p class="f6 lh-title pt0">This website uses cookies to improve user experience, track anonymous site usage, store authorization tokens and permit sharing on social media networks.  By continuing to browse this website you accept the use of cookies. <a href="/terms/privacy.aspx#cookiesguide" class="underline white">Click&nbsp;here</a> to read more about how we use cookies.</p>
+
+        <div class="mb3 tc"><button onclick="AcceptPrivacyPolicy();" class="b--green ba bg-green br-pill dark-gray dib f6 fw7 grow pv2 ph4 white">Continue</button></div>
+    </div>
+
+</div>
+<script src="/inc/js/cookies.js"></script>
+<script src="/inc/js/libs/uuidv4.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+        // if no PrivacyPolicy cookie, show model, else don't show
+        var guid = jdsGetCookie("PrivacyPolicy");
+        if (guid === null)
+        {
+            $('#cookiesModal').removeClass('dn');
+            $('#cookiesModal').addClass('db');
+        }
+        else
+        {
+            $('#cookiesModal').removeClass('db');
+            $('#cookiesModal').addClass('dn');
+        }
+    });
+
+    function AcceptPrivacyPolicy() {
+
+        jdsSetCookie("PrivacyPolicy", uuidv4(), 365 * 10);  // 10 years
+        $('#cookiesModal').removeClass('db');
+        $('#cookiesModal').addClass('dn');
+    }
+
+
+</script>  
+
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async="" defer="" src="//js.hs-scripts.com/4091418.js"></script>
+<!-- End of HubSpot Embed Code -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+         $("#lnkRefreshCache").click(function () {
+            $.ajax({ url: "", success:function(responseText){
+                location.reload();
+                }});
+        });
+       //ImageResize();
+
+       //  /* Edit/Close Page: toggle & reload iframe (FF) */
+        $("#cms_file_edit_div_OUT").click(function() {
+                $("#cms_file_edit").toggle(function() {
+                    // if Firefox & in visible mode, reload the iframe
+                    if ($.browser.mozilla == true && $(this).is(':visible')) {
+                       document.getElementById('cms_file_edit').src = document.getElementById('cms_file_edit').src
+                    }
+
+            if ($(this).is(':visible')) {
+                $("#cms_file_edit_div").text('Close Page');
+                    } else {
+                $("#cms_file_edit_div").text('Edit Page');
+                    }
+                });
+        });
+
+         /*initiate video ribbon*/
+        $('#mycarousel').jcarousel({scroll: 2});
+        $('#mycarousel').show();
+    });
+
+    /*$(window).resize(function(){
+        ImageResize();
+    });
+    */
+
+    /*function ImageResize(){
+        $width = $('#HTMLContentViewPanel').width();
+        $('#HTMLContentViewPanel img').css({
+            'max-width' : $width , 'height' : 'auto'
+        });
+        //Hide show images on smaller viewport
+        /*if ($width > 300 && $(window).width() > 600)
+        if ($width > 300 && $(window).width() > 600)
+            $('#HTMLContentViewPanel img').first().show();
+        else
+            $('#HTMLContentViewPanel img').first().hide();
+        */
+    //}
+
+    Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoadedHandler)
+    function pageLoadedHandler(sender, args)
+    {
+        window.scrollTo(0,0);
+    }
+
+    function HideShowEmbed() {
+        if ($('.embedBox').is(':visible'))
+            $('.embedBox').hide();
+        else
+            $('.embedBox').show();
+    }
+
+    function CopyToClipboard(e) {
+        $(e).focus();
+        $(e).select();
+
+        $('#embedURLCopyBtn').hide();
+        $('#embedCopyHint').show();
+    }
+    function sumShowLink() {$('#vidSumSubStr').hide();$('#vidSummary').show();}
+    function sumHideLink() {$('#vidSummary').hide();$('#vidSumSubStr').show();}
+
+    </script>
+    <script type="text/javascript" src="/inc/js/addLoadEvent.js"></script>
+    <script type="text/javascript"> 
+
+    addLoadEvent(documentOnLoad);
+
+    function documentOnLoad() {
+
+            var msg;
+            var s = document.getElementById("statement");
+            var pdfWindow = document.getElementById("pdf");
+            var googlepdfWindow = document.getElementById("googlePDF");
+            var googlepdfFrame = document.getElementById("googlePDFiframe");
+
+            var embedURL = "https://s3.amazonaws.com/documents.jdsupra.com/f148ac60-c68c-48df-aaa4-0307631d2737.pdf"
+            var embedURLGoogle = "https://docs.google.com/viewer?url=http%3A%2F%2Fdocuments.jdsupra.com%2Ff148ac60-c68c-48df-aaa4-0307631d2737.pdf&embedded=true"
+
+            if (false) {
+                $('html').addClass('ie11');
+            }
+
+            var myPDF = null;
+            try {
+                myPDF = (PDFObject.supportsPDFs);
+            } catch (e) {
+                myPDF = false;
+            }
+
+            if(myPDF){
+                show_embedded_viewer(embedURL);
+            } else {
+                show_google_viewer(embedURLGoogle);
+            }
+
+    }
+
+        function show_google_viewer(url){
+
+            var s = document.getElementById("statement");
+            if (s) { s.className = "fail"; }
+
+            var pdfWindow = document.getElementById("pdf");
+            if (pdfWindow && pdfWindow.style) { pdfWindow.style.display = 'none'; }
+
+            var googlepdfFrame = document.getElementById("googlePDFiframe");
+            if (googlepdfFrame) { googlepdfFrame.src = url; }
+
+            var googlepdfWindow = document.getElementById("googlePDF");
+            if (googlepdfWindow && googlepdfWindow.style) { googlepdfWindow.style.display = 'block'; }
+        }
+
+        function show_embedded_viewer(url){
+
+            var params = {pdfOpenParams: {navpanes: 0,toolbar: 0,statusbar: 0,view: "FitH"}};
+
+            try {
+                PDFObject.embed(url, "#pdf", params);
+            } catch (e){
+                alert("PDFObject EMBED ERROR" + e.message);
+            }
+
+            var s = document.getElementById("statement");
+            if (s) { s.className = "success"; }
+
+            var pdfWindow = document.getElementById("pdf");
+            if (pdfWindow && pdfWindow.style) { pdfWindow.style.display = 'block'; }
+
+            var googlepdfFrame = document.getElementById("googlePDFiframe");
+            if (googlepdfFrame) { googlepdfFrame.src = ''; }
+
+            var googlepdfWindow = document.getElementById("googlePDF");
+            if (googlepdfWindow && googlepdfWindow.style) { googlepdfWindow.style.display = 'none'; }
+        }
+
+        function get_cookie(name){
+            var a_all_cookies = document.cookie.split(';');
+            var a_temp_cookie = '';
+            var cookie_name = '';
+            var cookie_value = '';
+            var b_cookie_found = false;
+            for (i=0;i<a_all_cookies.length;i++){
+                a_temp_cookie = a_all_cookies[i].split('=');
+                cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g,'');
+                if ( cookie_name == name ){
+                    b_cookie_found = true;
+                    if (a_temp_cookie.length>1){
+                        cookie_value = unescape(a_temp_cookie[1].replace(/^\s+|\s+$/g,''));
+                    }
+                    return cookie_value;
+                    break;
+                }
+                a_temp_cookie = null;
+                cookie_name = '';
+            }
+            if (!b_cookie_found){
+                return null;
+            }
+        }
+
+        function set_cookie(name, value){
+            var today = new Date();
+            var expires = 365 * 1000 * 60 * 60 * 24;
+            today.setTime( today.getTime() );
+            var expires_date = new Date( today.getTime() + (expires) );
+            document.cookie = name + "=" + escape( value ) +
+                ";expires=" + expires_date.toGMTString() ;
+        }
+
+
+        var whitespace = " \t\n\r";
+
+        function isEmpty(s)
+        {   return ((s == null) || (s.length == 0))
+        }
+
+        function isWhitespace (s)
+        {   var i;
+            if (isEmpty(s)) return true;
+            for (i = 0; i < s.length; i++)
+            {
+                var c = s.charAt(i);
+                if (whitespace.indexOf(c) == -1) return false;
+            }
+            return true;
+        }
+
+    </script>
+  
+    <!--HTML TYPE ONLY - LOAD DOUBLEBAR SCRIPT FOR LARGE TABLES-->
+    <div id="DoubleScrollBarJSPanel">
+	
+        <script type="text/javascript" src="/inc/js/jquery.doubleScroll.js"></script>
+        <script type="text/javascript">  
+        $(document).ready(function() {
+           $('.double-scroll').doubleScroll();
+        });
+        </script>
+    
+</div>
+
+    <script type="text/javascript">
+       // Once the video is ready
+       //videojs.plugin('wavesurfer',wavesufer);
+
+
+       // we need to check and make sure we're on a video page. Grab the player ID, make sure it's a valid element, and only then try working with it. If we're a PDF, there's no video player.
+       var playerName = '';       
+       if (playerName!='' && document.getElementById(playerName)!=null){
+           videojs(playerName).ready(function(){
+               var myPlayer = this;    // Store the video object
+               var aspectRatio = 9/16; // Make up an aspect ratio
+
+               function resizeVideoJS(){
+                   // Get the parent element's actual width
+                   var width = document.getElementById('VideoContentViewPanel').offsetWidth;
+                   // Set width to fill parent element, Set height
+                   myPlayer.width(width).height( width * aspectRatio );
+               }
+
+               resizeVideoJS(); // Initialize the function
+               window.onresize = resizeVideoJS; // Call the function on resize
+
+               this.on('play', function(){ 
+                ga('send', 'event', 'Videos', 'Play', '') });
+               this.on('ended', function(){ ga('send', 'event', 'Videos', 'Ended', '') });
+               this.on('error', function(){ ga('send', 'event', 'Videos', 'Error', '') });
+           });
+
+           /*$(window).on( "orientationchange", function( event ) {
+               resizeVideoJS();
+               ImageResize();
+           });*/      
+       }
+    </script>    
+
+    <!-- FOLLOW BUTTON SCRIPTS -->
+    <script src="/inc/js/JDSupraFollow.js?v=1.1" type="text/javascript"></script>
+    <script src="/inc/js/DisplayFollowAlertScript.js" type="text/javascript"></script>  
+    <script type="text/javascript">
+            
+        $(document).ready(function(){             
+
+            if (true) {
+
+                LinkedInConfirmed=false;
+
+                if ($(window).width() < 650) {
+                    $('#FollowLinkedInSignIn').addClass('small');
+                }
+                $('.follow-action-lnk').click(function(){
+                    $('#FollowLinkedInSignIn').reveal();
+                });
+                $('input[name=FollowFrequency]').click(function(){
+                    $('#FollowLinkedInSignIn').reveal();
+                });
+
+                if(false) {
+                        $('#FollowLinkedInSignIn').reveal();
+                }
+                
+            } else { LinkedInConfirmed=true;}
+
+            });  
+
+
+            $( ".following-lnk" ).mouseover(function() {
+                $(this).html('-&nbsp;Unfollow'); 
+                $(this).addClass('blue');
+            });
+            $( ".following-lnk" ).mouseout(function() {
+                $(this).html('x&nbsp;Following'); 
+                $(this).removeClass('blue');
+            });
+
+            //Privacy Policy
+            $( "#policy-click" ).click(function() {
+                  $( "#policy-blk" ).show();
+                  $( "#digest-img" ).hide();
+            });    
+            $( ".close-lnk" ).click(function() {
+                  $( "#policy-blk" ).hide();
+                  $( "#digest-img" ).show();
+            }); 
+
+    </script>
+    <!-- END - FOLLOW BUTTON SCRIPTS - END -->
+    <script type="text/javascript">
+
+        var registrationButtonUri = '' ;
+        var eventUserId = '' ;
+        var fileGuid = 'f148ac60-c68c-48df-aaa4-0307631d2737';
+
+    </script>
+    <script src="/inc/js/RegistrationButtonClick.js" type="text/javascript"></script>   
+
+    <!-- GATED DOCUMENTS -->    
+    <!--Gated-->
+    <script src="/inc/js/jquery.reveal.min.js" type="text/javascript"></script> 
+    <script type="text/javascript">
+
+        // Gated
+        var gated = 0 ;
+
+        // Document Attributes
+        var gatedDocumentTitle = 'Washington State Legal Cannabis Revenue Soars' ;
+        var gatedDocumentURL = '/legalnews/washington-state-legal-cannabis-revenue-4115988' ;
+        var gatedUniqueFileID = 'f148ac60-c68c-48df-aaa4-0307631d2737'  ;
+        var gatedFileID = '564660' ;
+
+        if (gated) {
+            //$.getScript("/inc/js/jquery.reveal.min.js", function () {
+            //});
+
+            $.getScript("/inc/js/DocGate.js", function () {
+            });
+
+            $.getScript("/recaptcha/Recaptcha.js", function () {
+            });
+        }
+
+    </script>
+                
+    <!-- Gated Doc 'Form' -->
+    <div id="documentGatePanel" class="reveal-modal mw7 center pa4">
+
+        <form id="documentGateForm">
+            <a id="gatedModalClose" class="close-reveal-modal tr db silver" onclick="btnAbandonGate_Click();" href="/profile/cultiva_law_docs/"><i class="fa fa-times" aria-hidden="true"></i></a>            
+            <div id="documentGateFields" class="lh-copy">
+                <!-- dynamically constructed -->
+            </div>
+            <div id="verifyStatus" class="red"></div>
+            <div class="tc mt2">
+                <input type="submit" id="btnGateOpen" value="View Document »" onclick="btnGateOpen_Click();" class="ba dib grow mt2 no-underline pv2 ph4 br-pill bg-yellow b--yellow dark-gray fw7 f5">
+            </div> 
+        </form>
+
+        <!-- Recaptcha -->
+        <script type="text/javascript">
+
+            if (gated) {
+                var onloadCallback = function () {
+                    JDSRecaptchaLoaded(gateCallback);
+                }
+
+                $.getScript("https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit", function () {
+                });
+            }
+        </script>
+
+        <!-- Recaptcha Badge -->
+        <div id="jds-recaptcha" class="g-recaptcha" data-badge="bottomright"></div>
+  
+    </div>
+
+
+<script type="text/javascript">
+    function sendit() {
+    var fromLocation = escape(document.location);
+    var fromTitle = escape(document.title);
+    var sendWindow;
+    sendWindow = window.open ("/inc/sendToColleague.aspx?loc=" + fromLocation + "&title=" + fromTitle,"SendToColleague","toolbar=0,scrollbars=1,location=0,statusbar=0,status=0,menubar=0,resizable=0,width=400,height=900");
+    sendWindow.focus ();
+    }
+    /*truncate authors*/
+    if ($('#followPeopleSection').height() > 385) {
+        $('#followPeopleSection').addClass('is-more');
+    }
+    /*truncate subject*/
+    if ($('#followTopSubSection').height() > 595) {
+        $('#followTopSubSection').addClass('is-more');
+    }
+    function showMoreTags(e) {
+        $(e).removeClass('is-more');
+        $(e).addClass('is-less');
+    }
+    function hideMoreTags(e) {
+        $(e).removeClass('is-less');
+        $(e).addClass('is-more');
+    }
+</script>
+<script defer="" src="/theme/plugins/jquery.jcarousel.min.js"></script>
+
+ 
+<footer class="site-footer f6 tc pv3 white">
+    <p class="mb4 f7"><a href="#" onclick="ga('send', 'event', 'footer', 'backtotop-lnk', 'backtotop-lnk');">Back to Top</a></p>
+
+<a href="/" class="dib-ns db pv2 ph2 link" onclick="ga('send', 'event', 'footer', 'home-lnk', 'home-lnk');">Home</a>
+<a href="https://resources.jdsupra.com/" class="dib-ns db pv2 ph2 link" onclick="ga('send', 'event', 'footer', 'about-lnk', 'about-lnk');" target="_blank">What Is JD Supra?</a>
+<a href="/follow/manageyourinterests/" onclick="ga('send', 'event', 'footer', 'Footer Nav Email Link', 'Custom Email Digests');" class="dib-ns db pv2 ph2 link">Subscribe</a>
+<a href="https://resources.jdsupra.com/what-is-jd-supra-overview" class="dib-ns db pv2 ph2 link" onclick="ga('send', 'event', 'footer', 'become-contributor-lnk', 'become-contributor-lnk');" target="_blank">Leverage Your Thought Leadership</a>
+<a href="/terms/privacy.aspx" class="dib-ns db pv2 ph2 link" onclick="ga('send', 'event', 'footer', 'privacy-lnk', 'privacy-lnk');">Privacy Policy</a>
+<a href="/terms/termsandconditions.aspx" class="dib-ns db pv2 ph2 link" onclick="ga('send', 'event', 'footer', 'terms-lnk', 'terms-lnk');">Terms &amp; Conditions</a>
+<a href="/about/contact.aspx" class="dib-ns db pv2 ph2 link" onclick="ga('send', 'event', 'footer', 'contact-lnk', 'contact-lnk');">Contact</a>
+<a href="/services/team.aspx" class="dib-ns db pv2 ph2 link" onclick="ga('send', 'event', 'footer', 'team-lnk', 'team-lnk');">Team</a>
+
+<p class="tc mt3"><a href="https://spotlight.jdsupra.com/readerschoice/2022" onclick="ga('send', 'event', 'readerschoice', 'footer link click', 'footer link click');">Explore 2022 Readers' Choice Awards</a></p>
+
+   <p class="mt4 f7">Copyright © <script>var today = new Date(); var yyyy = today.getFullYear();document.write(yyyy + " ");</script> JD Supra, LLC</p>
+</footer>    
+
+
+
+
+</body></html>
