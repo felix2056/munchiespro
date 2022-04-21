@@ -210,7 +210,7 @@
                         <div class="w-full flex pb-2 overflow-x-auto flex-nowrap justify-start space-x-6 pb-8 xl:hide-horizontal-scrollbar">
                           <?php while($product = mysqli_fetch_array($productsResult)) : ?>
                             <div class="flex-none border border-gray-300 shadow-lg cursor-pointer card-dimensions rounded-xl hover:shadow-xl">
-                              <a href="/product/?id=<?= $product['id']?>" class="hover:text-black">
+                              <a href="/product.php/?id=<?= $product['id']?>" class="hover:text-black">
                                 <div class="bg-white border-b border-gray-300 h-3/5 rounded-t-xl">
                                   <span>
                                     <picture width="220" height="220">
