@@ -125,7 +125,7 @@
           </div>
           <div>
             <a
-              href="index.html"
+              href="/"
               class="flex items-center text-black router-link-active"
               ><img
                 src="fonts/back.f077cc83bc3d019b43148625a0813170.svg"
@@ -232,7 +232,7 @@
             </div>
             <div class="flex justify-center w-full pb-4">
               <a
-                href="index.html"
+                href="/"
                 class="block font-bold text-center router-link-active"
               >
                 Continue Shopping

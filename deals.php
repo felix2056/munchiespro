@@ -135,7 +135,7 @@
           </div>
           <div class="sr-only">
             <a
-              href="index.html"
+              href="/"
               class="flex items-center text-black router-link-active"
               ><img
                 src="fonts/back.f077cc83bc3d019b43148625a0813170.svg"
@@ -181,7 +181,7 @@
                     alt="Phone"
                     class="mr-2"
                   />
-                  (202) 650-9809
+                  <?= $site_phone ?>
                 </a>
               </div>
             </div>
@@ -211,7 +211,7 @@
                   class="flex px-2 py-1 mr-2 rounded text-center text-white bg-gray-300"
                   data-v-1e95f4d4=""
                 >
-                  Closed
+                  Open
                 </div>
                 9:00 am - 10:00 pm
                 <span class="ml-2" data-v-1e95f4d4=""
@@ -274,7 +274,7 @@
         >
           <li>
             <a
-              href="index.html"
+              href="/"
               class="block py-2 text-left text-gray-500 md:mr-6 router-link-active"
             >
               Overview
@@ -282,7 +282,7 @@
           </li>
           <li>
             <a
-              href="index.html#all"
+              href="/#all"
               class="block py-2 text-left text-gray-500 md:mr-6"
             >
               Menu
@@ -324,1078 +324,100 @@
         </ul>
         <!---->
       </div>
+
       <div class="-mt-1 border-gray-100 md:mb-4 border-t-1"></div>
+
+      <?php
+        $productsSql = "SELECT products.*, categories.* FROM products LEFT JOIN categories ON categories.id = products.category_id ORDER BY created_at DESC";
+        $productsResult = mysqli_query($link, $productsSql);
+      ?>
+
       <div class="max-w-6xl px-3 mx-auto text-left">
         <div class="w-full">
           <div class="flex flex-wrap pb-4">
             <div class="w-full">
               <div class="flex flex-wrap row-eq-height p-3">
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="26828.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            10oz plus +10 edibles + preroll
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <div tabindex="0" data-v-13d2d041="">med</div>
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              412
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
+                <?php while($product = mysqli_fetch_array($productsResult)) : ?>
+                  <div business="[object Object]" class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2">
+                    <div
+                      class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
                       data-v-13d2d041=""
                     >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="25513.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
+                      <a href="/product.php/?id=<?= $product['id']?>">
+                        <span data-v-13d2d041="">
+                          <picture width="270" height="180">
+                            <source srcset="<?= $product['featured_image']?>" />
+                            <img
+                              data-cfsrc="<?= $product['featured_image']?>"
+                              alt="<?= $product['title']?>"
                               width="270"
                               height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
+                              class="rounded-t-md w-full w-full h-auto"
+                              style="
+                                display: none;
+                                visibility: hidden;
+                              " />
+                            <noscript>
+                                <img
+                                src="<?= $product['featured_image']?>"
+                                alt="<?= $product['title']?>"
+                                width="270"
+                                height="180"
+                                class="rounded-t-md w-full w-full h-auto" />
+                            </noscript>
+                          </picture>
+                        </span>
+
+                        <div class="px-2" data-v-13d2d041="">
+                          <h4
+                            class="my-2 text-lg text-black min-h-14 max-h-16"
                             data-v-13d2d041=""
                           >
-                            7oz + 1 edible +1 cart + pre roll
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <!---->
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
+                            <span
+                              class="h-full font-semibold leading-tight line-clamp-3"
                               data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              723
+                            >
+                              <?= $product['title']?>
+                            </span>
+                          </h4>
+                          <div
+                            class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
+                            data-v-13d2d041=""
+                          >
+                            <div tabindex="0" class="truncate" data-v-13d2d041="">
+                              <?= $product['name']?>
+                            </div>
+
+                            <div tabindex="0" data-v-13d2d041="">med</div>
+                            <div
+                              tabindex="0"
+                              class="flex items-center align-center"
+                              data-v-13d2d041=""
+                            >
+                              <img
+                                src="/fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
+                                alt="Heart"
+                                class="w-3 h-3 mr-1 opacity-30"
+                                data-v-13d2d041=""
+                              />
+                              <div class="text-gray-3" data-v-13d2d041="">
+                                412
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
+                        </div></a
+                      >
+                      <a
+                        href="/"
+                        class="block px-2 text-sm font-bold text-black truncate router-link-active"
+                        data-v-13d2d041=""
+                      >
+                        by Munchies
+                      </a>
+                      <!---->
+                    </div>
                   </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="20099.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            5 Premium Oz + 5 Edibles + 5 Carts +pre roll
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <!---->
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              3114
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="18555.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            8oz + 2 Edible+ preroll+ free delivery
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <!---->
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              1946
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="18513.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            pick 3 premium Oz plus 3 edibles+ 1 pre roll
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <!---->
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              815
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="20175.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            10 Carts + 10 Edibles! +1 pre roll
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <!---->
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              1150
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="25510.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            4oz Premium+pre roll
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <div tabindex="0" data-v-13d2d041="">med</div>
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              857
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="18072.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            INDOOR Oz + cart +pre-roll
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <!---->
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              730
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="28122.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            $130 Any Premium Oz + edible + preroll
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <div tabindex="0" data-v-13d2d041="">med</div>
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              461
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="20107.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            $280 pick 2 premium oz + 1 edible + cart&amp; pre
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <!---->
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              461
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="18936.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            $100 for 3 Top Carts
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            edibles
-                          </div>
-                          <div tabindex="0" data-v-13d2d041="">med</div>
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              2576
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="22577.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            Two Premium 8th's Only $70!
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <div tabindex="0" data-v-13d2d041="">med</div>
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              1116
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
-                <div
-                  business="[object Object]"
-                  class="w-full md:w-1/3 lg:w-1/4 mb-3 px-2"
-                  data-v-13d2d041=""
-                >
-                  <div
-                    class="block relative h-full mx-auto border rounded-lg shadow-md max-w-300 min-w-48"
-                    data-v-13d2d041=""
-                  >
-                    <a href="22615.html" data-v-13d2d041=""
-                      ><span data-v-13d2d041=""
-                        ><picture width="270" height="180"
-                          ><!---->
-                          <source
-                            srcset="
-                              images/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg
-                            " />
-                          <img
-                            data-cfsrc="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                            alt="Where's Weed"
-                            width="270"
-                            height="180"
-                            class="rounded-t-md w-full w-full h-auto"
-                            style="
-                              display: none;
-                              visibility: hidden;
-                            " /><noscript
-                            ><img
-                              src="/menu_images/375x250/1bb2d55ff3680644e53f98c0bd2dfcc5.jpg"
-                              alt="Where's Weed"
-                              width="270"
-                              height="180"
-                              class="rounded-t-md w-full w-full h-auto" /></noscript></picture
-                      ></span>
-                      <div class="px-2" data-v-13d2d041="">
-                        <h4
-                          class="my-2 text-lg text-black min-h-14 max-h-16"
-                          data-v-13d2d041=""
-                        >
-                          <span
-                            class="h-full font-semibold leading-tight line-clamp-3"
-                            data-v-13d2d041=""
-                          >
-                            OFF before 11 am!
-                          </span>
-                        </h4>
-                        <div
-                          class="flex justify-between w-full mb-2 text-sm uppercase text-gray-3"
-                          data-v-13d2d041=""
-                        >
-                          <div tabindex="0" class="truncate" data-v-13d2d041="">
-                            bud
-                          </div>
-                          <div tabindex="0" data-v-13d2d041="">med</div>
-                          <div
-                            tabindex="0"
-                            class="flex items-center align-center"
-                            data-v-13d2d041=""
-                          >
-                            <img
-                              src="fonts/heart-full.4002e899dd05dd1e6b3286cf54b21c93.svg"
-                              alt="Heart"
-                              class="w-3 h-3 mr-1 opacity-30"
-                              data-v-13d2d041=""
-                            />
-                            <div class="text-gray-3" data-v-13d2d041="">
-                              3323
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <a
-                      href="index.html"
-                      class="block px-2 text-sm font-bold text-black truncate router-link-active"
-                      data-v-13d2d041=""
-                    >
-                      by Munchies
-                    </a>
-                    <!---->
-                  </div>
-                </div>
+                <?php endwhile; ?>
               </div>
             </div>
           </div>

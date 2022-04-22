@@ -135,7 +135,7 @@
           </div>
           <div class="sr-only">
             <a
-              href="index.html"
+              href="/"
               class="flex items-center text-black router-link-active"
               ><img
                 src="fonts/back.f077cc83bc3d019b43148625a0813170.svg"
@@ -181,7 +181,7 @@
                     alt="Phone"
                     class="mr-2"
                   />
-                  (202) 650-9809
+                  <?= $site_phone ?>
                 </a>
               </div>
             </div>
@@ -274,7 +274,7 @@
         >
           <li>
             <a
-              href="index.html"
+              href="/"
               class="block py-2 text-left text-gray-500 md:mr-6 router-link-active"
             >
               Overview
@@ -282,7 +282,7 @@
           </li>
           <li>
             <a
-              href="index.html#all"
+              href="/#all"
               class="block py-2 text-left text-gray-500 md:mr-6"
             >
               Menu

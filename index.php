@@ -62,7 +62,7 @@
             </a>
           </div>
           <div class="sr-only">
-            <a href="index.html" aria-current="page" class="flex items-center text-black router-link-exact-active router-link-active"><img src="fonts/back.f077cc83bc3d019b43148625a0813170.svg" alt="back icon" />
+            <a href="/" aria-current="page" class="flex items-center text-black router-link-exact-active router-link-active"><img src="fonts/back.f077cc83bc3d019b43148625a0813170.svg" alt="back icon" />
               <div class="mx-2">Munchies</div>
             </a>
           </div>
@@ -130,12 +130,12 @@
         </div>
         <ul class="flex justify-between p-0 mb-1 overflow-hidden list-none border-b md:justify-start">
           <li>
-            <a href="index.html" aria-current="page" class="block py-2 text-left text-gray-500 md:mr-6 router-link-exact-active router-link-active text-black font-bold border-b-2 border-green-500">
+            <a href="/" aria-current="page" class="block py-2 text-left text-gray-500 md:mr-6 router-link-exact-active router-link-active text-black font-bold border-b-2 border-green-500">
               Overview
             </a>
           </li>
           <li>
-            <a href="index.html#all" class="block py-2 text-left text-gray-500 md:mr-6">
+            <a href="/#all" class="block py-2 text-left text-gray-500 md:mr-6">
               Menu
             </a>
           </li>
@@ -167,7 +167,7 @@
         <div id="business-index" city="washington-dc" businesstype="marijuana-delivery" business="munchies-dc">
           <div class="pb-8">
           <?php
-            $categoriesSql = "SELECT * FROM categories ORDER BY created_at DESC";
+            $categoriesSql = "SELECT * FROM categories ORDER BY created_at ASC";
             $categoriesResult = mysqli_query($link, $categoriesSql);
           ?>
             <div>
