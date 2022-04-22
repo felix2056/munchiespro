@@ -233,12 +233,20 @@
                                     <?= $product['category_name']?>
                                   </div>
                                   
-                                  <div class="flex text-sm">
-                                    <span class="mr-1 font-bold text-green-500">
-                                      $<?= $product['price']?>
-                                    </span>
-                                    1/2 oz <span class="ml-1"> + </span>
-                                  </div>
+                                  <?php if(strtolower($product['category_name']) == 'edibles') : ?>
+                                    <div class="flex text-sm">
+                                      <span class="mr-1 font-bold text-green-500">$25</span> 1 
+                                      <span class="ml-1">+</span>
+                                    </div>
+
+                                  <?php else : ?>
+                                    <div class="flex text-sm">
+                                      <span class="mr-1 font-bold text-green-500">
+                                        $<?= $product['price']?>
+                                      </span>
+                                      1/2 oz <span class="ml-1"> + </span>
+                                    </div>
+                                  <?php endif; ?>
                                 </div>
                               </a>
                             </div>

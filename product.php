@@ -89,26 +89,57 @@
                                 <div class="text-sm"><?= $single['name'] ?></div>
 
                                 <div class="relative my-auto">
-                                    <div class="flex w-full py-2 -mx-1 overflow-x-auto hide-horizontal-scrollbar">
-                                        <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
-                                            <div class="font-bold">$<?= $single['price'] ?></div>
-                                            <div class="text-sm">1/8 oz</div>
-                                        </button>
-                                        <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
-                                            <div class="font-bold">$<?= $single['price'] + 10 ?></div>
-                                            <div class="text-sm">1/4 oz</div>
-                                        </button>
-                                        <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
-                                            <div class="font-bold">$<?= $single['price'] + 20 ?></div>
-                                            <div class="text-sm">1/2 oz</div>
-                                        </button>
-                                        <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
-                                            <div class="font-bold">$<?= $single['price'] * 3 ?></div>
-                                            <div class="text-sm">oz</div>
-                                        </button>
-                                        <div class="filler-element-min-width"></div>
-                                        <div class="absolute right-0 w-16 h-full pointer-events-none faded-edge-right"></div>
-                                    </div>
+                                    <?php if(strtolower($single['name']) == 'edibles') : ?>
+                                        <div class="flex w-full py-2 -mx-1 overflow-x-auto hide-horizontal-scrollbar">
+                                            <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-solid border-2 border-green-500 bg-green-100">
+                                                <div class="font-bold">
+                                                    $<?= $single['price'] ?>
+                                                </div> 
+                                                <div class="text-sm">
+                                                    1
+                                                </div>
+                                            </button>
+                                            <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                                <div class="font-bold">
+                                                    $<?= $single['price'] + 50 ?>
+                                                </div>
+                                                <div class="text-sm">
+                                                    3
+                                                </div>
+                                            </button>
+                                            <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                                <div class="font-bold">
+                                                    $<?= $single['price'] + 80 ?>
+                                                </div>
+                                                <div class="text-sm">
+                                                    5
+                                                </div>
+                                            </button> 
+                                            <div class="filler-element-min-width"></div> 
+                                            <div class="absolute right-0 w-16 h-full pointer-events-none faded-edge-right"></div>
+                                        </div>
+                                    <?php else : ?>
+                                        <div class="flex w-full py-2 -mx-1 overflow-x-auto hide-horizontal-scrollbar">
+                                            <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                                <div class="font-bold">$<?= $single['price'] ?></div>
+                                                <div class="text-sm">1/8 oz</div>
+                                            </button>
+                                            <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                                <div class="font-bold">$<?= $single['price'] + 10 ?></div>
+                                                <div class="text-sm">1/4 oz</div>
+                                            </button>
+                                            <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                                <div class="font-bold">$<?= $single['price'] + 20 ?></div>
+                                                <div class="text-sm">1/2 oz</div>
+                                            </button>
+                                            <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                                <div class="font-bold">$<?= $single['price'] * 3 ?></div>
+                                                <div class="text-sm">oz</div>
+                                            </button>
+                                            <div class="filler-element-min-width"></div>
+                                            <div class="absolute right-0 w-16 h-full pointer-events-none faded-edge-right"></div>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
 
                                 <div class="flex flex-wrap">
