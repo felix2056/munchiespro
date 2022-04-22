@@ -11,11 +11,13 @@
 
 <?php while($single = mysqli_fetch_array($result)) : ?>
     <div id="app" data-server-rendered="true">
-        <div city="washington-dc" businesstype="marijuana-delivery" business="munchies-dc" <?= $single['name'] ?>tion="recreational" productid="235200952" class="flex flex-col w-full min-h-screen">
+        <div city="washington-dc" businesstype="marijuana-delivery" business="munchies-dc" <?= $single['name'] ?> productid="235200952" class="flex flex-col w-full min-h-screen">
             <div class="sticky top-0 z-30 w-full bg-white border border-b">
                 <div class="flex flex-wrap items-center justify-between px-3 py-1 mx-auto min-h-14 lg:flex-nowrap lg:py-0 max-w-6xl">
                     <div>
-                        <a href="index_1.html" class="my-1.5 lg:my-0 router-link-active"><img src="fonts/logo-full.a39565678ef661d9865a9843f0f0a087.svg" alt="Where's Weed" width="180" height="30" /></a>
+                        <a href="/" class="my-1.5 lg:my-0 router-link-active">
+                            <img src="fonts/logo-full.a39565678ef661d9865a9843f0f0a087.svg" alt="Munchies Pro" width="180" height="30" />
+                        </a>
                     </div>
                     <div class="flex flex-wrap order-3 w-full lg:mt-0 lg:flex-nowrap lg:order-none lg:max-w-2xl">
                         <label for="main-search" class="w-full lg:mx-2">
@@ -52,7 +54,7 @@
                 <!---->
                 <!---->
                 <div class="max-w-6xl px-3 mx-auto text-left">
-                    <div city="washington-dc" businesstype="marijuana-delivery" business="munchies-dc" <?= $single['name'] ?>tion="recreational" productid="235200952" class="flex flex-col w-full py-2 m-auto">
+                    <div city="washington-dc" businesstype="marijuana-delivery" business="munchies-dc" <?= $single['name'] ?> productid="235200952" class="flex flex-col w-full py-2 m-auto">
                         <nav aria-label="breadcrumb" class="py-1 h-8 text-sm">
                             <div class="sr-only">
                                 <a href="index_1.html" class="flex items-center text-black router-link-active"><img src="fonts/back.f077cc83bc3d019b43148625a0813170.svg" alt="back icon" />
@@ -74,8 +76,11 @@
                                     };
                                     //]]>
                                 </script>
-                                <script type="text/javascript" src="js/mirage2.min.js"></script>
-                                <img data-cfsrc="<?= $single['featured_image'] ?>" alt="<?= $single['title'] ?>" width="400" height="400" class="w-full shadow-sm rounded-xl" style="display: none; visibility: hidden" /><noscript><img src="<?= $single['featured_image'] ?>" alt="<?= $single['title'] ?>" width="400" height="400" class="w-full shadow-sm rounded-xl" /></noscript>
+                                <script type="text/javascript" src="/js/mirage2.min.js"></script>
+                                <img data-cfsrc="<?= $single['featured_image'] ?>" alt="<?= $single['title'] ?>" width="400" height="400" class="w-full shadow-sm rounded-xl" style="display: none; visibility: hidden" />
+                                <noscript>
+                                    <img src="<?= $single['featured_image'] ?>" alt="<?= $single['title'] ?>" width="400" height="400" class="w-full shadow-sm rounded-xl" />
+                                </noscript>
                             </div>
                             <div class="w-full md:w-3/4 md:mx-4">
                                 <div class="py-2 text-xl font-bold">
@@ -89,13 +94,16 @@
                                         <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
                                             <div class="font-bold">$<?= $single['price'] ?></div>
                                             <div class="text-sm">1/8 oz</div>
-                                        </button><button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                        </button>
+                                        <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
                                             <div class="font-bold">$<?= $single['price'] + 10 ?></div>
                                             <div class="text-sm">1/4 oz</div>
-                                        </button><button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                        </button>
+                                        <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
                                             <div class="font-bold">$<?= $single['price'] + 20 ?></div>
                                             <div class="text-sm">1/2 oz</div>
-                                        </button><button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
+                                        </button>
+                                        <button class="relative flex flex-col p-2 px-3 mx-1 text-black rounded border-dashed border-2 border-gray-300 cursor-default">
                                             <div class="font-bold">$<?= $single['price'] * 3 ?></div>
                                             <div class="text-sm">oz</div>
                                         </button>
@@ -137,7 +145,8 @@
 
                                 <div class="my-4">
                                     <button type="button" class="h-10 px-2 bg-white border border-gray-300 shadow-sm rounded-xl">
-                                        <span class="flex items-center w-full"><img src="fonts/share-alternate.3d34d63e4777a5a3dbf7e06810aa5441.svg" alt="social share" height="25" width="25" class="mx-1" />
+                                        <span class="flex items-center w-full">
+                                            <img src="fonts/share-alternate.3d34d63e4777a5a3dbf7e06810aa5441.svg" alt="social share" height="25" width="25" class="mx-1" />
                                             <span class="w-full mx-1 text-sm font-bold text-black uppercase">
                                                 Share
                                             </span>
