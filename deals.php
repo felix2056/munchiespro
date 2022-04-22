@@ -11,15 +11,15 @@
       <div
         class="flex flex-wrap items-center justify-between px-3 py-1 mx-auto min-h-14 lg:flex-nowrap lg:py-0 max-w-6xl"
       >
-        <div>
-          <a href="index_1.html" class="my-1.5 lg:my-0 router-link-active"
+        <!-- <div>
+          <a href="/" class="my-1.5 lg:my-0 router-link-active"
             ><img
               src="fonts/logo-full.a39565678ef661d9865a9843f0f0a087.svg"
               alt="Where's Weed"
               width="180"
               height="30"
           /></a>
-        </div>
+        </div> -->
         <div
           class="flex flex-wrap order-3 w-full lg:mt-0 lg:flex-nowrap lg:order-none lg:max-w-2xl"
         >
@@ -387,7 +387,7 @@
                             <div tabindex="0" class="truncate" data-v-13d2d041="">
                               <?= $product['name']?>
                             </div>
-                            
+
                             <div
                               tabindex="0"
                               class="flex items-center align-center"

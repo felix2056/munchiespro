@@ -4,7 +4,11 @@
 	<div city="washington-dc" businesstype="marijuana-delivery" business="munchies-dc" class="flex flex-col w-full min-h-screen">
 		<div class="sticky top-0 z-30 w-full bg-white border border-b">
 			<div class="flex flex-wrap items-center justify-between px-3 py-1 mx-auto min-h-14 lg:flex-nowrap lg:py-0 max-w-6xl">
-				<div><a href="index_1.html" class="my-1.5 lg:my-0 router-link-active"><img src="/fonts/logo-full.a39565678ef661d9865a9843f0f0a087.svg" alt="Where's Weed" width="180" height="30"></a></div>
+				<!-- <div>
+					<a href="" class="my-1.5 lg:my-0 router-link-active">
+						<img src="/fonts/logo-full.a39565678ef661d9865a9843f0f0a087.svg" alt="Where's Weed" width="180" height="30">
+					</a>
+				</div> -->
 				<div class="flex flex-wrap order-3 w-full lg:mt-0 lg:flex-nowrap lg:order-none lg:max-w-2xl"><label for="main-search" class="w-full lg:mx-2">
 						<div id="main-search" class="relative w-full relative my-1 min-w-global-search">
 							<div class="absolute mt-2.5 text-gray-500 ml-2.5">
