@@ -328,7 +328,7 @@
       <div class="-mt-1 border-gray-100 md:mb-4 border-t-1"></div>
 
       <?php
-        $productsSql = "SELECT products.*, categories.* FROM products LEFT JOIN categories ON categories.id = products.category_id ORDER BY products.created_at DESC";
+        $productsSql = "SELECT products.*, categories.id AS category_id, categories.name, categories.created_at, categories.updated_at FROM products LEFT JOIN categories ON categories.id = products.category_id ORDER BY products.created_at DESC";
         $productsResult = mysqli_query($link, $productsSql);
       ?>
 
@@ -404,8 +404,8 @@
                               </div>
                             </div>
                           </div>
-                        </div></a
-                      >
+                        </div>
+                      </a>
                       <a
                         href="/"
                         class="block px-2 text-sm font-bold text-black truncate router-link-active"
