@@ -387,8 +387,7 @@
                             <div tabindex="0" class="truncate" data-v-13d2d041="">
                               <?= $product['name']?>
                             </div>
-
-                            <div tabindex="0" data-v-13d2d041="">med</div>
+                            
                             <div
                               tabindex="0"
                               class="flex items-center align-center"

@@ -190,20 +190,22 @@
                       $productsResult = mysqli_query($link, $productsSql);
                     ?>
 
-                    <div class="absolute left-0 z-20 transform -translate-x-1/2 -translate-y-1/2 top-1/2 hidden xl:block" style="display: none">
-                      <button class="bg-green-500 border-0 border-none rounded-full hover:bg-purple-500 focus:ring focus:ring-green-300 focus:border-green-300">
-                        <div class="flex content-center justify-center w-12 h-12 text-4xl font-bold text-center text-white align-middle">
-                          <img src="/fonts/arrow-right.9ce6af2b5061c752d3816cb9d5bbab83.svg" height="12" width="12" alt="Previous Arrow" class="transform rotate-180" />
-                        </div>
-                      </button>
-                    </div>
-                    <div class="absolute z-20 transform -translate-x-1/2 -translate-y-1/2 top-1/2 -right-12 hidden xl:block">
-                      <button class="bg-green-500 border-0 border-none rounded-full hover:bg-purple-500 focus:ring focus:ring-green-300 focus:border-green-300">
-                        <div class="flex content-center justify-center w-12 h-12 text-4xl font-bold text-center text-white align-middle">
-                          <img src="/fonts/arrow-right.9ce6af2b5061c752d3816cb9d5bbab83.svg" height="12" width="12" alt="Next Arrow" />
-                        </div>
-                      </button>
-                    </div>
+                    <?php if($productsResult && mysqli_num_rows($productsResult) > 6) : ?>
+                      <div class="absolute left-0 z-20 transform -translate-x-1/2 -translate-y-1/2 top-1/2 hidden xl:block" style="display: none">
+                        <button class="bg-green-500 border-0 border-none rounded-full hover:bg-purple-500 focus:ring focus:ring-green-300 focus:border-green-300">
+                          <div class="flex content-center justify-center w-12 h-12 text-4xl font-bold text-center text-white align-middle">
+                            <img src="/fonts/arrow-right.9ce6af2b5061c752d3816cb9d5bbab83.svg" height="12" width="12" alt="Previous Arrow" class="transform rotate-180" />
+                          </div>
+                        </button>
+                      </div>
+                      <div class="absolute z-20 transform -translate-x-1/2 -translate-y-1/2 top-1/2 -right-12 hidden xl:block">
+                        <button class="bg-green-500 border-0 border-none rounded-full hover:bg-purple-500 focus:ring focus:ring-green-300 focus:border-green-300">
+                          <div class="flex content-center justify-center w-12 h-12 text-4xl font-bold text-center text-white align-middle">
+                            <img src="/fonts/arrow-right.9ce6af2b5061c752d3816cb9d5bbab83.svg" height="12" width="12" alt="Next Arrow" />
+                          </div>
+                        </button>
+                      </div>
+                    <?php endif; ?>
 
                     <div class="flex w-full">
                       <?php if ($productsResult && mysqli_num_rows($productsResult) > 0) : ?>
@@ -244,14 +246,17 @@
                         </div>
                       <?php endif; ?>
                     </div>
-                    <div class="flex justify-center w-full pb-6 space-x-3 hidden xl:flex">
-                      <button class="flex justify-center border-none rounded-full flex-nowrap focus:ring-green-300 focus:ring focus:rounded-full focus:border-gray-300">
-                        <span class="bg-green-500 w-4 h-4 border-none rounded-full hover:bg-purple-500"></span>
-                      </button>
-                      <button class="flex justify-center border-none rounded-full flex-nowrap focus:ring-green-300 focus:ring focus:rounded-full focus:border-gray-300">
-                        <span class="bg-gray-300 w-4 h-4 border-none rounded-full hover:bg-purple-500"></span>
-                      </button>
-                    </div>
+
+                    <?php if($productsResult && mysqli_num_rows($productsResult) > 6) : ?>
+                      <div class="flex justify-center w-full pb-6 space-x-3 hidden xl:flex">
+                        <button class="flex justify-center border-none rounded-full flex-nowrap focus:ring-green-300 focus:ring focus:rounded-full focus:border-gray-300">
+                          <span class="bg-green-500 w-4 h-4 border-none rounded-full hover:bg-purple-500"></span>
+                        </button>
+                        <button class="flex justify-center border-none rounded-full flex-nowrap focus:ring-green-300 focus:ring focus:rounded-full focus:border-gray-300">
+                          <span class="bg-gray-300 w-4 h-4 border-none rounded-full hover:bg-purple-500"></span>
+                        </button>
+                      </div>
+                      <?php endif; ?>
                   </div>
                 <?php endwhile; ?>
               </div>
