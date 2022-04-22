@@ -328,7 +328,7 @@
       <div class="-mt-1 border-gray-100 md:mb-4 border-t-1"></div>
 
       <?php
-        $productsSql = "SELECT products.*, categories.* FROM products LEFT JOIN categories ON categories.id = products.category_id ORDER BY created_at DESC";
+        $productsSql = "SELECT products.*, categories.* FROM products LEFT JOIN categories ON categories.id = products.category_id ORDER BY products.created_at DESC";
         $productsResult = mysqli_query($link, $productsSql);
       ?>
 
@@ -424,7 +424,7 @@
         </div>
       </div>
     </div>
-    
+
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
