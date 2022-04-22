@@ -226,23 +226,22 @@
                                 </div>
                                 <div class="grid grid-cols-1 px-3 py-4 h-2/5 place-content-between">
                                   <div class="flex font-bold text-md line-clamp-1">
-                                    <?= $product['title']?>
+                                    <?= $product['title'] ?>
                                   </div>
                                   
                                   <div class="flex text-sm capitalize">
-                                    <?= $product['category_name']?>
+                                    <?= $category['name'] ?>
                                   </div>
                                   
-                                  <?php if(strtolower($product['category_name']) == 'edibles') : ?>
+                                  <?php if(strtolower($category['name']) == 'edibles') : ?>
                                     <div class="flex text-sm">
-                                      <span class="mr-1 font-bold text-green-500">$25</span> 1 
+                                      <span class="mr-1 font-bold text-green-500">$<?= $product['price']?></span> 1 
                                       <span class="ml-1">+</span>
                                     </div>
-
                                   <?php else : ?>
                                     <div class="flex text-sm">
                                       <span class="mr-1 font-bold text-green-500">
-                                        $<?= $product['price']?>
+                                        $<?= $product['price'] ?>
                                       </span>
                                       1/2 oz <span class="ml-1"> + </span>
                                     </div>
