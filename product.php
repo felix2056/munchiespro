@@ -16,7 +16,7 @@
                 <div class="flex flex-wrap items-center justify-between px-3 py-1 mx-auto min-h-14 lg:flex-nowrap lg:py-0 max-w-6xl">
                     <div>
                         <a href="/" class="my-1.5 lg:my-0 router-link-active">
-                            <img src="fonts/logo-full.a39565678ef661d9865a9843f0f0a087.svg" alt="Munchies Pro" width="180" height="30" />
+                            <img src="/fonts/logo-full.a39565678ef661d9865a9843f0f0a087.svg" alt="Munchies Pro" width="180" height="30" />
                         </a>
                     </div>
                     <div class="flex flex-wrap order-3 w-full lg:mt-0 lg:flex-nowrap lg:order-none lg:max-w-2xl">
@@ -50,19 +50,18 @@
                 </div>
                 <!---->
             </div>
+            
             <div>
-                <!---->
-                <!---->
                 <div class="max-w-6xl px-3 mx-auto text-left">
                     <div city="washington-dc" businesstype="marijuana-delivery" business="munchies-dc" <?= $single['name'] ?> productid="235200952" class="flex flex-col w-full py-2 m-auto">
                         <nav aria-label="breadcrumb" class="py-1 h-8 text-sm">
                             <div class="sr-only">
-                                <a href="index_1.html" class="flex items-center text-black router-link-active"><img src="fonts/back.f077cc83bc3d019b43148625a0813170.svg" alt="back icon" />
+                                <a href="index_1.html" class="flex items-center text-black router-link-active"><img src="/fonts/back.f077cc83bc3d019b43148625a0813170.svg" alt="back icon" />
                                     <div class="mx-2">Home</div>
                                 </a>
                             </div>
                             <div>
-                                <a href="/" class="flex items-center text-black"><img src="fonts/back.f077cc83bc3d019b43148625a0813170.svg" alt="back icon" />
+                                <a href="/" class="flex items-center text-black"><img src="/fonts/back.f077cc83bc3d019b43148625a0813170.svg" alt="back icon" />
                                     <div class="mx-2">Back to Munchies</div>
                                 </a>
                             </div>
@@ -146,7 +145,7 @@
                                 <div class="my-4">
                                     <button type="button" class="h-10 px-2 bg-white border border-gray-300 shadow-sm rounded-xl">
                                         <span class="flex items-center w-full">
-                                            <img src="fonts/share-alternate.3d34d63e4777a5a3dbf7e06810aa5441.svg" alt="social share" height="25" width="25" class="mx-1" />
+                                            <img src="/fonts/share-alternate.3d34d63e4777a5a3dbf7e06810aa5441.svg" alt="social share" height="25" width="25" class="mx-1" />
                                             <span class="w-full mx-1 text-sm font-bold text-black uppercase">
                                                 Share
                                             </span>

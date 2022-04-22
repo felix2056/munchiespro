@@ -84,7 +84,7 @@ if(mysqli_num_rows($settingsResult) > 0){
     <link rel="preload" href="/js/56.e135e55cf95999dd6f06.js" as="script" />
     <link rel="preload" href="/css/70.99b5daa4d7556323bc35.css" as="style" />
     <link rel="preload" href="/js/70.c8befb544202cbf29a71.js" as="script" />
-    
+
     <link rel="prefetch" href="/css/1.3fbe4db4b3072438fc6f.css" />
     <link rel="prefetch" href="/css/11.414b29ce092776086cc2.css" />
     <link rel="prefetch" href="/css/12.120f837b54a59f9955ed.css" />
@@ -225,6 +225,8 @@ if(mysqli_num_rows($settingsResult) > 0){
     <link rel="prefetch" href="/js/vendors~businessCart~businessDeals~content.04ea54c8507501d035b0.js" />
     <link rel="prefetch" href="/js/vendors~user.a72afb46d74a3ac414a3.js" />
     <link rel="prefetch" href="/serviceWorker.js" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link rel="stylesheet" href="/css/48.4fc109c8e47f2b59ddd6.css" />
     <link rel="stylesheet" href="/css/26.3dead1be3a89e80567a8.css" />
