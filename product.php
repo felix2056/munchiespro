@@ -37,7 +37,7 @@
                         <!---->
                     </div>
                     <div class="flex items-center flex-nowrap">
-                        <a href="cart.html" class="hidden p-1 mr-2 border-2 border-gray-300 border-solid rounded-full shadow-sm md:block">
+                        <a href="/cart.php" class="hidden p-1 mr-2 border-2 border-gray-300 border-solid rounded-full shadow-sm md:block">
                             <img src="/fonts/cart.ef6c6f0f2caa3db67c8819a81a3db8c7.svg" alt="Go to cart" />
                         </a>
                         <button class="border border-gray-300 bg-white text-xs lg:w-16 py-2 text-black rounded shadow-md mr-2.5 font-bold lg:text-sm w-14">
@@ -50,7 +50,7 @@
                 </div>
                 <!---->
             </div>
-            
+
             <div>
                 <div class="max-w-6xl px-3 mx-auto text-left">
                     <div city="washington-dc" businesstype="marijuana-delivery" business="munchies-dc" <?= $single['name'] ?> productid="235200952" class="flex flex-col w-full py-2 m-auto">

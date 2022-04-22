@@ -25,7 +25,7 @@
           <!---->
         </div>
         <div class="flex items-center flex-nowrap">
-          <a href="cart.html" class="hidden p-1 mr-2 border-2 border-gray-300 border-solid rounded-full shadow-sm md:block">
+          <a href="/cart.php" class="hidden p-1 mr-2 border-2 border-gray-300 border-solid rounded-full shadow-sm md:block">
             <img src="/fonts/cart.ef6c6f0f2caa3db67c8819a81a3db8c7.svg" alt="Go to cart" />
           </a>
           <button class="border border-gray-300 bg-white text-xs lg:w-16 py-2 text-black rounded shadow-md mr-2.5 font-bold lg:text-sm w-14">
@@ -140,22 +140,22 @@
             </a>
           </li>
           <li>
-            <a href="about.html" class="block py-2 text-left text-gray-500 md:mr-6">
+            <a href="/about.php" class="block py-2 text-left text-gray-500 md:mr-6">
               Details
             </a>
           </li>
           <li>
-            <a href="deals.html" class="block py-2 text-left text-gray-500 md:mr-6">
+            <a href="/deals.php" class="block py-2 text-left text-gray-500 md:mr-6">
               Deals
             </a>
           </li>
           <li>
-            <a href="reviews.html" class="block py-2 text-left text-gray-500 md:mr-6">
+            <a href="/reviews.php" class="block py-2 text-left text-gray-500 md:mr-6">
               Reviews
             </a>
           </li>
           <li>
-            <a href="gallery.html" class="block py-2 text-left text-gray-500 md:mr-6">
+            <a href="/gallery.php" class="block py-2 text-left text-gray-500 md:mr-6">
               Photos
             </a>
           </li>
@@ -257,7 +257,7 @@
               </div>
               <?php endif; ?>
               
-              <a href="cart.html" class="fixed bottom-0 w-full md:relative z-20 w-full text-sm font-bold">
+              <a href="/cart.php" class="fixed bottom-0 w-full md:relative z-20 w-full text-sm font-bold">
                 <div class="fixed bottom-0 left-0 flex items-center justify-between w-full p-2 text-white bg-green-500 md:hidden">
                   <div class="px-2 border border-white rounded">0</div>
                   <div class="text-lg font-bold">Your Cart</div>
